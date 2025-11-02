@@ -1,0 +1,20 @@
+{"group": "A", "topic_id": 2, "topic_size": 42, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "r package installation issues", "cosine": 0.4696844816207886}
+{"group": "A", "topic_id": 6, "topic_size": 19, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "loading r data", "cosine": 0.7256841659545898}
+{"group": "A", "topic_id": 7, "topic_size": 19, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "economic growth policy", "cosine": 0.6787952184677124}
+{"group": "A", "topic_id": 8, "topic_size": 17, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "audio volume issues", "cosine": 0.697399377822876}
+{"group": "A", "topic_id": 12, "topic_size": 14, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "technical support issues", "cosine": 0.4458971917629242}
+{"group": "A", "topic_id": 18, "topic_size": 11, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "article access issues", "cosine": 0.7090857028961182}
+{"group": "A", "topic_id": 24, "topic_size": 8, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "nba player opportunity", "cosine": 0.6016659736633301}
+{"group": "A", "topic_id": 25, "topic_size": 8, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "download module issues", "cosine": 0.7242352366447449}
+{"group": "A", "topic_id": 35, "topic_size": 7, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "binomial approximation methods", "cosine": 0.6890182495117188}
+{"group": "A", "topic_id": 38, "topic_size": 6, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "autism prevalence changes", "cosine": 0.7827203869819641}
+{"group": "A", "topic_id": 44, "topic_size": 6, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "slope and intercept", "cosine": 0.8164973258972168}
+{"group": "A", "topic_id": 51, "topic_size": 5, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "help with homework", "cosine": 0.6252041459083557}
+{"group": "A", "topic_id": 62, "topic_size": 5, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "alzheimers disease prevention", "cosine": 0.6805993318557739}
+{"group": "A", "topic_id": 65, "topic_size": 5, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "computer says wrong", "cosine": 0.6148869395256042}
+{"group": "A", "topic_id": 73, "topic_size": 4, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "principal component analysis", "cosine": 0.5464752912521362}
+{"group": "A", "topic_id": 85, "topic_size": 4, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "sign confusion issues", "cosine": 0.6128085851669312}
+{"group": "A", "topic_id": 118, "topic_size": 3, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "slow internet issues", "cosine": 0.2776484191417694}
+{"group": "A", "topic_id": 131, "topic_size": 2, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "error with singular fits", "cosine": 0.7083398103713989}
+{"group": "A", "topic_id": 135, "topic_size": 2, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "correct variable thinking", "cosine": 0.6070555448532104}
+{"group": "A", "topic_id": 154, "topic_size": 2, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "work plan example", "cosine": 0.39540210366249084}

@@ -1,0 +1,10 @@
+{
+  "group": "D",
+  "model": "qwen/qwen3-vl-30b-a3b-instruct",
+  "input_rows": 94,
+  "clean_rows": 13,
+  "reject_rows": 81,
+  "reprompted_once": 0,
+  "in_dir": "results/llm",
+  "out_dir": "results/llm"
+}

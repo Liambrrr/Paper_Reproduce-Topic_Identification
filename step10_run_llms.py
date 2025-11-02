@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 """
 Step 10 - Run LLMs for multiple times and store raw outputs
 
@@ -28,23 +25,12 @@ Outputs:
   results/llm/labels_D_<model>.jsonl
 
 Example usage:
-  # Llama 3.3 70B (OpenAI-compatible endpoint, e.g., vLLM/Together)
-  python step10_run_llms.py \
-    --provider openai-compatible \
-    --api-base https://api.your-endpoint.com \
-    --api-key $YOUR_KEY \
-    --models llama-3.3-70b-instruct
-
-  # Qwen3 30B on Ollama
-  python step10_run_llms.py \
-    --provider ollama \
-    --models qwen3:30b
 
   # Run all four requested models (names are examples; set to what your backend expects):
   python step10_run_llms.py \
     --provider openai-compatible \
-    --api-base https://api.your-endpoint.com \
-    --api-key $KEY \
+    --api-base https://openrouter.ai/api\
+    --api-key KEY \
     --models llama-3.1-8b llama-3.3-70b-instruct qwen2.5-7b qwen3-30b
 """
 
@@ -117,23 +103,38 @@ def call_openai_compatible(model: str,
                            temperature: float,
                            top_p: float,
                            max_new_tokens: int) -> Dict[str, Any]:
-    url = api_base.rstrip("/") + "/v1/chat/completions"
+    # accept api_base with or without /v1
+    base = (api_base or "").rstrip("/")
+    url = base + ("/chat/completions" if base.endswith("/v1") else "/v1/chat/completions")
+
     headers = {"Content-Type": "application/json"}
     if api_key:
         headers["Authorization"] = f"Bearer {api_key}"
+    # OpenRouter-friendly (optional)
+    headers["HTTP-Referer"] = "http://localhost"
+    headers["X-Title"] = "Paper5 Topic Labeler"
 
     payload = {
-        "model": model,
-        "messages": messages,
-        "temperature": temperature,
-        "top_p": top_p,
-        "max_tokens": max_new_tokens,
+        "model": model,                               # e.g. meta-llama/llama-3.1-8b-instruct
+        "messages": messages,                         # [{role: system|user, content: "..."}]
+        "temperature": float(temperature),            # 0
+        "top_p": float(top_p),                        # 1
+        "max_tokens": int(max_new_tokens),            # ~32
     }
+
     r = requests.post(url, headers=headers, data=json.dumps(payload), timeout=120)
-    r.raise_for_status()
+
+    # surface error JSON to the caller so it’s written into your JSONL "error" field
+    if r.status_code >= 400:
+        try:
+            err = r.json()
+        except Exception:
+            err = {"text": r.text}
+        raise RuntimeError(f"HTTP {r.status_code} {r.reason}: {err}")
+
     data = r.json()
     choice = data["choices"][0]
-    text = (choice["message"]["content"] or "").strip()
+    text = (choice.get("message", {}).get("content") or "").strip()
     return {
         "text": text,
         "finish_reason": choice.get("finish_reason"),

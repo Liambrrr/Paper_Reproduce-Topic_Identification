@@ -1,0 +1,10 @@
+{
+  "group": "A",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "input_rows": 161,
+  "clean_rows": 4,
+  "reject_rows": 157,
+  "reprompted_once": 0,
+  "in_dir": "results/llm",
+  "out_dir": "results/llm"
+}

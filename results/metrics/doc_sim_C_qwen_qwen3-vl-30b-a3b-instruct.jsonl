@@ -1,0 +1,3 @@
+{"meta": {"group": "C", "topic_id": 0, "topic_size": 1308, "model_tag": "qwen_qwen3-vl-30b-a3b-instruct"}, "label": "course data issues", "stats": {"n_snippets": 10, "mean": 0.1730717122554779, "min": -0.023151541128754616, "max": 0.4154450595378876}}
+{"meta": {"group": "C", "topic_id": 13, "topic_size": 3, "model_tag": "qwen_qwen3-vl-30b-a3b-instruct"}, "label": "office hours inquiry", "stats": {"n_snippets": 3, "mean": 0.7116062045097351, "min": 0.6566745042800903, "max": 0.8065429925918579}}
+{"meta": {"group": "C", "topic_id": 21, "topic_size": 2, "model_tag": "qwen_qwen3-vl-30b-a3b-instruct"}, "label": "gender and risk perception", "stats": {"n_snippets": 2, "mean": 0.4142189621925354, "min": 0.3595198690891266, "max": 0.4689180254936218}}

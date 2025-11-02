@@ -1,0 +1,10 @@
+{
+  "group": "C",
+  "model": "qwen/qwen2.5-coder-7b-instruct",
+  "input_rows": 22,
+  "clean_rows": 0,
+  "reject_rows": 22,
+  "reprompted_once": 0,
+  "in_dir": "results/llm",
+  "out_dir": "results/llm"
+}

@@ -89,7 +89,7 @@ def build_system_prompt() -> str:
         "Constraints:\n"
         "- 'label' must be a concise, human-readable topic name of at most 4 words.\n"
         "- Do not include quotes, numbering, brackets, or punctuation in the label.\n"
-        "- 'rationale' is 1–2 short sentences explaining why the label fits.\n"
+        "- 'rationale' is 1-2 short sentences explaining why the label fits.\n"
         "- Respond with ONLY the JSON object. No extra text before or after.\n"
     )
 
@@ -120,14 +120,14 @@ def format_user_prompt(
         base.append("Representative snippets: (none)")
 
     base.append(
-        "\nTask: Based on the keywords and snippets, provide a concise human-readable label (≤4 words) that best describes this topic."
+        "\nTask: Based on the keywords and snippets, provide a concise human-readable label (<=4 words) that best describes this topic."
     )
     if include_variant_note:
         base.append("If multiple plausible labels exist, choose the most general, course-agnostic phrasing.")
 
     # Require strict JSON output:
     base.append(
-        'Return JSON ONLY in the form: {"label": "<≤4 words>", "rationale": "<short reason>"}'
+        'Return JSON ONLY in the form: {"label": "< <=4 words>", "rationale": "<short reason>"}'
     )
 
     return "\n".join(base)
@@ -166,7 +166,7 @@ def build_prompt_records_for_group(
             },
             "rationale": {
                 "type": "string",
-                "description": "1–2 sentences explaining why the label fits the keywords/snippets."
+                "description": "122 sentences explaining why the label fits the keywords/snippets."
             }
         },
         "additionalProperties": False

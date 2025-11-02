@@ -1,0 +1,3 @@
+{"group": "C", "topic_id": 0, "topic_size": 1308, "llm_model": "qwen/qwen3-vl-30b-a3b-instruct", "llm_provider": "openai-compatible", "label": "course data issues", "cosine": 0.5295404195785522}
+{"group": "C", "topic_id": 13, "topic_size": 3, "llm_model": "qwen/qwen3-vl-30b-a3b-instruct", "llm_provider": "openai-compatible", "label": "office hours inquiry", "cosine": 0.7969052791595459}
+{"group": "C", "topic_id": 21, "topic_size": 2, "llm_model": "qwen/qwen3-vl-30b-a3b-instruct", "llm_provider": "openai-compatible", "label": "gender and risk perception", "cosine": 0.5212656259536743}

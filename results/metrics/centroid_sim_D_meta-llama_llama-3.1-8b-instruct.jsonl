@@ -1,0 +1,7 @@
+{"group": "D", "topic_id": 1, "topic_size": 24, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "resuscitation room setup", "cosine": 0.47293731570243835}
+{"group": "D", "topic_id": 6, "topic_size": 10, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "seizures in pediatrics", "cosine": 0.5404645800590515}
+{"group": "D", "topic_id": 25, "topic_size": 5, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "interpreting data correctly", "cosine": 0.5113973617553711}
+{"group": "D", "topic_id": 31, "topic_size": 5, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "fitness performance", "cosine": 0.6656613945960999}
+{"group": "D", "topic_id": 57, "topic_size": 3, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "exact vs chisquare test", "cosine": 0.7941150665283203}
+{"group": "D", "topic_id": 60, "topic_size": 3, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "percentages in decimals", "cosine": 0.6581377387046814}
+{"group": "D", "topic_id": 76, "topic_size": 2, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "statement accomplishment issue", "cosine": 0.6806281805038452}

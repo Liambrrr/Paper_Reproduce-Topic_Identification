@@ -1,0 +1,4 @@
+{"group": "B", "topic_id": 1, "topic_size": 93, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "math education challenges", "cosine": 0.6166538596153259}
+{"group": "B", "topic_id": 6, "topic_size": 8, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "getting course credit", "cosine": 0.6536037921905518}
+{"group": "B", "topic_id": 9, "topic_size": 6, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "video captions needed", "cosine": 0.6682313084602356}
+{"group": "B", "topic_id": 18, "topic_size": 3, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "clarify feedback requirements", "cosine": 0.5130486488342285}
