@@ -1,0 +1,4 @@
+Education_courses	LDA	LSI	NMF	BERTopic
+Number_of_topics	10	4	4	10
+Coherence_score	0.363	0.517	0.620	0.638
+IRBO	0.724	0.755	0.976	0.98

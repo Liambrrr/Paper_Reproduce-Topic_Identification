@@ -1,0 +1,5 @@
+Group,Model,Paper_Topics,Paper_Coherence,Paper_IRBO,Our_Topics,Our_Coherence,Our_IRBO,Diff_Topics,Diff_Coherence,Diff_Coherence_Pct,Diff_IRBO
+Education,LDA,10.0,0.363,0.724,6,0.465,0.819,-4,+0.102,+28.1%,+0.095
+Education,LSI,4.0,0.517,0.755,3,0.557,0.825,-1,+0.040,+7.7%,+0.070
+Education,NMF,4.0,0.62,0.976,3,0.579,0.995,-1,-0.041,-6.6%,+0.019
+Education,BERTopic,10.0,0.638,0.98,25,0.6722,0.991,15,+0.034,+5.4%,+0.011

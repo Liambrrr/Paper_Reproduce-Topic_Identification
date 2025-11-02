@@ -1,0 +1,4 @@
+Medicine_courses	LDA	LSI	NMF	BERTopic
+Number_of_topics	2	6	6	37
+Coherence_score	0.517	0.499	0.755	0.604
+IRBO	1	0.427	1	1

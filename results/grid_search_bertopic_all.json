@@ -1,0 +1,2026 @@
+{
+  "All": [
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 2,
+      "n_topics": 386,
+      "n_outliers": 1365,
+      "coherence_cv": 0.6640632551478437,
+      "irbo": 0.9996368753676909
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 2,
+      "n_topics": 348,
+      "n_outliers": 1607,
+      "coherence_cv": 0.6636312614829315,
+      "irbo": 0.9995252519174105
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 2,
+      "n_topics": 287,
+      "n_outliers": 1837,
+      "coherence_cv": 0.6642060027222574,
+      "irbo": 0.9996188996734239
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 2,
+      "n_topics": 314,
+      "n_outliers": 2002,
+      "coherence_cv": 0.6769170811430006,
+      "irbo": 0.9996274341453782
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 2,
+      "n_topics": 171,
+      "n_outliers": 2137,
+      "coherence_cv": 0.6638025096526833,
+      "irbo": 0.9995854576860409
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 2,
+      "n_topics": 161,
+      "n_outliers": 1823,
+      "coherence_cv": 0.6923378836350824,
+      "irbo": 0.9995276219172958
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 2,
+      "n_topics": 83,
+      "n_outliers": 2091,
+      "coherence_cv": 0.678985650193875,
+      "irbo": 0.9997118716813326
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 2,
+      "n_topics": 245,
+      "n_outliers": 1933,
+      "coherence_cv": 0.660968648656982,
+      "irbo": 0.9995685175451013
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 2,
+      "n_topics": 314,
+      "n_outliers": 2172,
+      "coherence_cv": 0.6522969059398019,
+      "irbo": 0.999673695247174
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 3,
+      "n_topics": 32,
+      "n_outliers": 1588,
+      "coherence_cv": 0.6247343829267118,
+      "irbo": 0.9985191909639977
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 3,
+      "n_topics": 201,
+      "n_outliers": 1885,
+      "coherence_cv": 0.6331039105220905,
+      "irbo": 0.9991606651450058
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 3,
+      "n_topics": 176,
+      "n_outliers": 2115,
+      "coherence_cv": 0.6174896838410642,
+      "irbo": 0.9992108068012812
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 3,
+      "n_topics": 58,
+      "n_outliers": 2191,
+      "coherence_cv": 0.6306807488530447,
+      "irbo": 0.9988650692335705
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 3,
+      "n_topics": 175,
+      "n_outliers": 2441,
+      "coherence_cv": 0.6016932223407063,
+      "irbo": 0.999288519786065
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 3,
+      "n_topics": 133,
+      "n_outliers": 2269,
+      "coherence_cv": 0.6419394147537449,
+      "irbo": 0.9990889864990184
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 3,
+      "n_topics": 37,
+      "n_outliers": 2572,
+      "coherence_cv": 0.6567936454782769,
+      "irbo": 0.9994983409599957
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 3,
+      "n_topics": 168,
+      "n_outliers": 2324,
+      "coherence_cv": 0.6283667638743465,
+      "irbo": 0.9993032467417208
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 3,
+      "n_topics": 182,
+      "n_outliers": 2426,
+      "coherence_cv": 0.6595064775266493,
+      "irbo": 0.9991324389266387
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 4,
+      "n_topics": 146,
+      "n_outliers": 1843,
+      "coherence_cv": 0.6152170829221033,
+      "irbo": 0.9987761921418841
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 4,
+      "n_topics": 135,
+      "n_outliers": 1866,
+      "coherence_cv": 0.6152701819443274,
+      "irbo": 0.9989190560907051
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 4,
+      "n_topics": 95,
+      "n_outliers": 2254,
+      "coherence_cv": 0.6286168471976766,
+      "irbo": 0.9989008217596062
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 4,
+      "n_topics": 14,
+      "n_outliers": 2326,
+      "coherence_cv": 0.6243668337568942,
+      "irbo": 0.9932965908965812
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 4,
+      "n_topics": 74,
+      "n_outliers": 2536,
+      "coherence_cv": 0.6142030812769873,
+      "irbo": 0.9987234120430699
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 4,
+      "n_topics": 119,
+      "n_outliers": 2438,
+      "coherence_cv": 0.6239692032722312,
+      "irbo": 0.9990191074909744
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 4,
+      "n_topics": 78,
+      "n_outliers": 2505,
+      "coherence_cv": 0.6145698613984647,
+      "irbo": 0.9987516404340491
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 4,
+      "n_topics": 104,
+      "n_outliers": 2510,
+      "coherence_cv": 0.6233737799809874,
+      "irbo": 0.9987067447621777
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 4,
+      "n_topics": 119,
+      "n_outliers": 2638,
+      "coherence_cv": 0.6350116797342162,
+      "irbo": 0.9988572447003823
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 5,
+      "n_topics": 97,
+      "n_outliers": 1894,
+      "coherence_cv": 0.5904261158531906,
+      "irbo": 0.9984486708832917
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 5,
+      "n_topics": 93,
+      "n_outliers": 1956,
+      "coherence_cv": 0.6126404827519716,
+      "irbo": 0.9984946500844261
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 5,
+      "n_topics": 61,
+      "n_outliers": 2303,
+      "coherence_cv": 0.6202718166459341,
+      "irbo": 0.9984068233977986
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 5,
+      "n_topics": 107,
+      "n_outliers": 2407,
+      "coherence_cv": 0.6379823247853121,
+      "irbo": 0.9987713072606454
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 5,
+      "n_topics": 41,
+      "n_outliers": 2374,
+      "coherence_cv": 0.6231084449957239,
+      "irbo": 0.9987101976354181
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 5,
+      "n_topics": 94,
+      "n_outliers": 2159,
+      "coherence_cv": 0.6285226495638904,
+      "irbo": 0.9983341443531171
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 5,
+      "n_topics": 40,
+      "n_outliers": 2325,
+      "coherence_cv": 0.6451573389802123,
+      "irbo": 0.9980082585491942
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 5,
+      "n_topics": 64,
+      "n_outliers": 2766,
+      "coherence_cv": 0.6086978960827548,
+      "irbo": 0.9987097507468411
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 5,
+      "n_topics": 35,
+      "n_outliers": 2534,
+      "coherence_cv": 0.6158509049602271,
+      "irbo": 0.9981382740389436
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 10,
+      "n_topics": 41,
+      "n_outliers": 2166,
+      "coherence_cv": 0.5408018154145977,
+      "irbo": 0.9954625936606659
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 10,
+      "n_topics": 34,
+      "n_outliers": 2135,
+      "coherence_cv": 0.5444548250736723,
+      "irbo": 0.9951667213857454
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 10,
+      "n_topics": 59,
+      "n_outliers": 2340,
+      "coherence_cv": 0.5963897161419642,
+      "irbo": 0.9965695056343659
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 10,
+      "n_topics": 20,
+      "n_outliers": 1962,
+      "coherence_cv": 0.5772433967321232,
+      "irbo": 0.9941993979537761
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 10,
+      "n_topics": 16,
+      "n_outliers": 2003,
+      "coherence_cv": 0.6083801819687376,
+      "irbo": 0.9938111357606217
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 10,
+      "n_topics": 48,
+      "n_outliers": 2520,
+      "coherence_cv": 0.6085844753066606,
+      "irbo": 0.9968024161347293
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 10,
+      "n_topics": 19,
+      "n_outliers": 2651,
+      "coherence_cv": 0.6499025978956043,
+      "irbo": 0.9933653207030075
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 10,
+      "n_topics": 14,
+      "n_outliers": 2874,
+      "coherence_cv": 0.6141683982244143,
+      "irbo": 0.9965789660299843
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 10,
+      "n_topics": 25,
+      "n_outliers": 2675,
+      "coherence_cv": 0.5750463077382111,
+      "irbo": 0.9951606423133915
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 15,
+      "n_topics": 39,
+      "n_outliers": 2162,
+      "coherence_cv": 0.6002006827193258,
+      "irbo": 0.9932963358996916
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 15,
+      "n_topics": 40,
+      "n_outliers": 1765,
+      "coherence_cv": 0.6090564750376153,
+      "irbo": 0.9951319269498352
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 15,
+      "n_topics": 32,
+      "n_outliers": 1917,
+      "coherence_cv": 0.6279860797847888,
+      "irbo": 0.9956629855391993
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 23,
+      "coherence_cv": 0.6283886045665378,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 15,
+      "n_topics": 11,
+      "n_outliers": 2203,
+      "coherence_cv": 0.5727652194855719,
+      "irbo": 0.9939128343064935
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 15,
+      "n_topics": 3,
+      "n_outliers": 28,
+      "coherence_cv": 0.6691919063004413,
+      "irbo": 0.9913729411
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 15,
+      "n_topics": 25,
+      "n_outliers": 2283,
+      "coherence_cv": 0.6303859801851268,
+      "irbo": 0.9937014505106191
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 15,
+      "n_topics": 10,
+      "n_outliers": 2398,
+      "coherence_cv": 0.5889942820719725,
+      "irbo": 0.9919759935590476
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 17,
+      "coherence_cv": 0.6283886045665378,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 20,
+      "n_topics": 33,
+      "n_outliers": 1773,
+      "coherence_cv": 0.6352704207034362,
+      "irbo": 0.9906390415367965
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 20,
+      "n_topics": 29,
+      "n_outliers": 1839,
+      "coherence_cv": 0.6298448369359565,
+      "irbo": 0.993829092084729
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 20,
+      "n_topics": 6,
+      "n_outliers": 95,
+      "coherence_cv": 0.6101557382342931,
+      "irbo": 0.9942858050114286
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 20,
+      "n_topics": 14,
+      "n_outliers": 2025,
+      "coherence_cv": 0.6700213938618381,
+      "irbo": 0.9950739046376766
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 20,
+      "n_topics": 22,
+      "n_outliers": 2145,
+      "coherence_cv": 0.6028615862942088,
+      "irbo": 0.9945649401315398
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 20,
+      "n_topics": 20,
+      "n_outliers": 2205,
+      "coherence_cv": 0.6242171239662765,
+      "irbo": 0.9955569260942105
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 20,
+      "n_topics": 25,
+      "n_outliers": 2186,
+      "coherence_cv": 0.6301602398202835,
+      "irbo": 0.9947207541599048
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 20,
+      "n_topics": 6,
+      "n_outliers": 2203,
+      "coherence_cv": 0.5934601945050418,
+      "irbo": 0.9786702162371429
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 27,
+      "coherence_cv": 0.6283886045665378,
+      "irbo": 1.0
+    }
+  ],
+  "Education": [
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 2,
+      "n_topics": 31,
+      "n_outliers": 70,
+      "coherence_cv": 0.6156637862278828,
+      "irbo": 0.9964992275106981
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 2,
+      "n_topics": 38,
+      "n_outliers": 90,
+      "coherence_cv": 0.6221484770128062,
+      "irbo": 0.992789215183278
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 2,
+      "n_topics": 23,
+      "n_outliers": 105,
+      "coherence_cv": 0.587865676012913,
+      "irbo": 0.9937611364005208
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 2,
+      "n_topics": 39,
+      "n_outliers": 99,
+      "coherence_cv": 0.5599124396720526,
+      "irbo": 0.9923587381590986
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 2,
+      "n_topics": 24,
+      "n_outliers": 102,
+      "coherence_cv": 0.6373387703376688,
+      "irbo": 0.9937290297504255
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 2,
+      "n_topics": 43,
+      "n_outliers": 152,
+      "coherence_cv": 0.6549092305793485,
+      "irbo": 0.9942670354977448
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 2,
+      "n_topics": 20,
+      "n_outliers": 84,
+      "coherence_cv": 0.6054207197665104,
+      "irbo": 0.9892865951755221
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 2,
+      "n_topics": 37,
+      "n_outliers": 141,
+      "coherence_cv": 0.6529378057704863,
+      "irbo": 0.9948056765783283
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 2,
+      "n_topics": 25,
+      "n_outliers": 132,
+      "coherence_cv": 0.6722021290218392,
+      "irbo": 0.9909673417451746
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 3,
+      "n_topics": 15,
+      "n_outliers": 43,
+      "coherence_cv": 0.5119563720800541,
+      "irbo": 0.9896406383947242
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 3,
+      "n_topics": 26,
+      "n_outliers": 52,
+      "coherence_cv": 0.5190523487303618,
+      "irbo": 0.9837359171565129
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 3,
+      "n_topics": 14,
+      "n_outliers": 152,
+      "coherence_cv": 0.6420477742855104,
+      "irbo": 0.9928265453152625
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 3,
+      "n_topics": 19,
+      "n_outliers": 140,
+      "coherence_cv": 0.5513315171953055,
+      "irbo": 0.9863907762568087
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 3,
+      "n_topics": 9,
+      "n_outliers": 121,
+      "coherence_cv": 0.5702681723721237,
+      "irbo": 0.9811540812123016
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 3,
+      "n_topics": 14,
+      "n_outliers": 99,
+      "coherence_cv": 0.5695983067086998,
+      "irbo": 0.9874897851585906
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 3,
+      "n_topics": 8,
+      "n_outliers": 134,
+      "coherence_cv": 0.6672164998025065,
+      "irbo": 0.9867078215653061
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 3,
+      "n_topics": 11,
+      "n_outliers": 118,
+      "coherence_cv": 0.5787108506148525,
+      "irbo": 0.9880276430735642
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 3,
+      "n_topics": 13,
+      "n_outliers": 141,
+      "coherence_cv": 0.5970155628418589,
+      "irbo": 0.9875122148868539
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 4,
+      "n_topics": 10,
+      "n_outliers": 60,
+      "coherence_cv": 0.4858726633989857,
+      "irbo": 0.9662396026461728
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 4,
+      "n_topics": 7,
+      "n_outliers": 81,
+      "coherence_cv": 0.44836548723086583,
+      "irbo": 0.9844869324612245
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 4,
+      "n_topics": 19,
+      "n_outliers": 85,
+      "coherence_cv": 0.5300960614341272,
+      "irbo": 0.9761595641077787
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 4,
+      "n_topics": 6,
+      "n_outliers": 116,
+      "coherence_cv": 0.4792332666587921,
+      "irbo": 0.9883179997228572
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 4,
+      "n_topics": 5,
+      "n_outliers": 151,
+      "coherence_cv": 0.5764443545834577,
+      "irbo": 0.9879007901242857
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 4,
+      "n_topics": 7,
+      "n_outliers": 96,
+      "coherence_cv": 0.5378136565721751,
+      "irbo": 0.9746727025414966
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 4,
+      "n_topics": 4,
+      "n_outliers": 172,
+      "coherence_cv": 0.6628606631063944,
+      "irbo": 0.9940612223285714
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 4,
+      "n_topics": 14,
+      "n_outliers": 99,
+      "coherence_cv": 0.5192093409488459,
+      "irbo": 0.9625606242686726
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 4,
+      "n_topics": 5,
+      "n_outliers": 140,
+      "coherence_cv": 0.5016874260737458,
+      "irbo": 0.9782482241285715
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 5,
+      "n_topics": 11,
+      "n_outliers": 77,
+      "coherence_cv": 0.4449389028600477,
+      "irbo": 0.9841001845205195
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 5,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.5273811218604978,
+      "irbo": 0.8995373339714285
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 5,
+      "n_topics": 6,
+      "n_outliers": 97,
+      "coherence_cv": 0.4985094248491746,
+      "irbo": 0.9793114883771429
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 5,
+      "n_topics": 4,
+      "n_outliers": 152,
+      "coherence_cv": 0.567864744718366,
+      "irbo": 0.9771770955571428
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 5,
+      "n_topics": 3,
+      "n_outliers": 131,
+      "coherence_cv": 0.603201386817957,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 5,
+      "n_topics": 2,
+      "n_outliers": 81,
+      "coherence_cv": 0.576808575224186,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 5,
+      "n_topics": 2,
+      "n_outliers": 122,
+      "coherence_cv": 0.5850881854200253,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 5,
+      "n_topics": 2,
+      "n_outliers": 114,
+      "coherence_cv": 0.5327293150585055,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 5,
+      "n_topics": 10,
+      "n_outliers": 122,
+      "coherence_cv": 0.5171773388231684,
+      "irbo": 0.9704948786441976
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 10,
+      "coherence_cv": 0.48327388195410154,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 10,
+      "n_topics": 4,
+      "n_outliers": 29,
+      "coherence_cv": 0.4792893260514164,
+      "irbo": 0.9599349439642857
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 10,
+      "n_topics": 4,
+      "n_outliers": 124,
+      "coherence_cv": 0.49974763715693704,
+      "irbo": 0.9750537216357142
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 10,
+      "n_topics": 6,
+      "n_outliers": 115,
+      "coherence_cv": 0.5277086736198183,
+      "irbo": 0.9680962826028572
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 25,
+      "coherence_cv": 0.46643353340752625,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 10,
+      "n_topics": 6,
+      "n_outliers": 111,
+      "coherence_cv": 0.49977784187297275,
+      "irbo": 0.9805722090971428
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 10,
+      "n_topics": 3,
+      "n_outliers": 47,
+      "coherence_cv": 0.4911472230334715,
+      "irbo": 0.9543541911142858
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 10,
+      "n_topics": 5,
+      "n_outliers": 118,
+      "coherence_cv": 0.5585681844874573,
+      "irbo": 0.9847812314542858
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 22,
+      "coherence_cv": 0.46643353340752625,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 18,
+      "coherence_cv": 0.4752350531409886,
+      "irbo": 0.9497873339714286
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 16,
+      "coherence_cv": 0.4551493482531246,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 51,
+      "coherence_cv": 0.42532018832349777,
+      "irbo": 0.9837379054
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 15,
+      "n_topics": 4,
+      "n_outliers": 133,
+      "coherence_cv": 0.5705527303189324,
+      "irbo": 0.9558510832642857
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 40,
+      "coherence_cv": 0.47875929693810026,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 48,
+      "coherence_cv": 0.5179746915605423,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 52,
+      "coherence_cv": 0.46318817706623755,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 15,
+      "n_topics": 4,
+      "n_outliers": 129,
+      "coherence_cv": 0.5488667322713063,
+      "irbo": 0.9730974439642858
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 53,
+      "coherence_cv": 0.4537263789107518,
+      "irbo": 0.9837379054
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 24,
+      "coherence_cv": 0.4752350531409886,
+      "irbo": 0.9497873339714286
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 36,
+      "coherence_cv": 0.41825368115188155,
+      "irbo": 0.9903809179
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 74,
+      "coherence_cv": 0.4284190382208475,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 56,
+      "coherence_cv": 0.4284190382208475,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 50,
+      "coherence_cv": 0.4551493482531246,
+      "irbo": 0.9643673339714286
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 78,
+      "coherence_cv": 0.4787592969381004,
+      "irbo": 0.9837379054
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 68,
+      "coherence_cv": 0.4537263789107518,
+      "irbo": 0.9837379054
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 20,
+      "n_topics": 4,
+      "n_outliers": 159,
+      "coherence_cv": 0.5435895619259521,
+      "irbo": 0.9840892643071428
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 98,
+      "coherence_cv": 0.47075651165473065,
+      "irbo": 1.0
+    }
+  ],
+  "Humanities": [
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 2,
+      "n_topics": 190,
+      "n_outliers": 513,
+      "coherence_cv": 0.6341422617183095,
+      "irbo": 0.9993038161519219
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 2,
+      "n_topics": 127,
+      "n_outliers": 560,
+      "coherence_cv": 0.6122617492607592,
+      "irbo": 0.9989706515800223
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 2,
+      "n_topics": 119,
+      "n_outliers": 485,
+      "coherence_cv": 0.6293197052891023,
+      "irbo": 0.9989197218752791
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 2,
+      "n_topics": 40,
+      "n_outliers": 526,
+      "coherence_cv": 0.6125875125085675,
+      "irbo": 0.9988407772558059
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 2,
+      "n_topics": 92,
+      "n_outliers": 574,
+      "coherence_cv": 0.6168609721316137,
+      "irbo": 0.9987458094119351
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 2,
+      "n_topics": 106,
+      "n_outliers": 635,
+      "coherence_cv": 0.6429806204435508,
+      "irbo": 0.9987132394942495
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 2,
+      "n_topics": 114,
+      "n_outliers": 549,
+      "coherence_cv": 0.6445697751174724,
+      "irbo": 0.9989339843924999
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 2,
+      "n_topics": 22,
+      "n_outliers": 661,
+      "coherence_cv": 0.6693484993738177,
+      "irbo": 0.9989770216533086
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 2,
+      "n_topics": 158,
+      "n_outliers": 654,
+      "coherence_cv": 0.6488260424568265,
+      "irbo": 0.9989561253801569
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 3,
+      "n_topics": 105,
+      "n_outliers": 600,
+      "coherence_cv": 0.5958472773998417,
+      "irbo": 0.9984168303708826
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 3,
+      "n_topics": 92,
+      "n_outliers": 511,
+      "coherence_cv": 0.5931204088528034,
+      "irbo": 0.9981447429660293
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 3,
+      "n_topics": 46,
+      "n_outliers": 548,
+      "coherence_cv": 0.5607996732999069,
+      "irbo": 0.998129981664489
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 3,
+      "n_topics": 33,
+      "n_outliers": 674,
+      "coherence_cv": 0.5955214963633619,
+      "irbo": 0.9984027582859849
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 3,
+      "n_topics": 23,
+      "n_outliers": 631,
+      "coherence_cv": 0.585470264904803,
+      "irbo": 0.9954024010971767
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 3,
+      "n_topics": 64,
+      "n_outliers": 700,
+      "coherence_cv": 0.5556331388413942,
+      "irbo": 0.9976088020839474
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 3,
+      "n_topics": 43,
+      "n_outliers": 584,
+      "coherence_cv": 0.644622089330834,
+      "irbo": 0.9979077892578706
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 3,
+      "n_topics": 63,
+      "n_outliers": 602,
+      "coherence_cv": 0.5926703585263429,
+      "irbo": 0.9983086471817277
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 3,
+      "n_topics": 27,
+      "n_outliers": 664,
+      "coherence_cv": 0.5721488925235375,
+      "irbo": 0.9985255305555962
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 4,
+      "n_topics": 34,
+      "n_outliers": 493,
+      "coherence_cv": 0.572041674345894,
+      "irbo": 0.9980763562130635
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 4,
+      "n_topics": 74,
+      "n_outliers": 587,
+      "coherence_cv": 0.580504058060507,
+      "irbo": 0.9981513952774551
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 4,
+      "n_topics": 55,
+      "n_outliers": 620,
+      "coherence_cv": 0.5596406485955673,
+      "irbo": 0.9977509346535354
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 4,
+      "n_topics": 66,
+      "n_outliers": 704,
+      "coherence_cv": 0.6036767964496268,
+      "irbo": 0.99754309274442
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 4,
+      "n_topics": 52,
+      "n_outliers": 733,
+      "coherence_cv": 0.5808695113131697,
+      "irbo": 0.9977763489193516
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 4,
+      "n_topics": 48,
+      "n_outliers": 831,
+      "coherence_cv": 0.5754453619295146,
+      "irbo": 0.9974389290421353
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 4,
+      "n_topics": 46,
+      "n_outliers": 673,
+      "coherence_cv": 0.6217362473210024,
+      "irbo": 0.9969623321473599
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 4,
+      "n_topics": 44,
+      "n_outliers": 677,
+      "coherence_cv": 0.6050556104899609,
+      "irbo": 0.9972012308684972
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 4,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.4707108363207244,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 5,
+      "n_topics": 45,
+      "n_outliers": 512,
+      "coherence_cv": 0.595663302522984,
+      "irbo": 0.9977897960659629
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 5,
+      "n_topics": 31,
+      "n_outliers": 583,
+      "coherence_cv": 0.5966660834358146,
+      "irbo": 0.9964812365647995
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 5,
+      "n_topics": 37,
+      "n_outliers": 718,
+      "coherence_cv": 0.5474149709740814,
+      "irbo": 0.9972030491777992
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 5,
+      "n_topics": 50,
+      "n_outliers": 687,
+      "coherence_cv": 0.5828964555363337,
+      "irbo": 0.9972035563943673
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 5,
+      "n_topics": 39,
+      "n_outliers": 647,
+      "coherence_cv": 0.6008424135639389,
+      "irbo": 0.9969290482801041
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 5,
+      "n_topics": 44,
+      "n_outliers": 689,
+      "coherence_cv": 0.5820691914480866,
+      "irbo": 0.9974159581586144
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 5,
+      "n_topics": 43,
+      "n_outliers": 686,
+      "coherence_cv": 0.6157710687735751,
+      "irbo": 0.9972714899271986
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 5,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.47071083632072436,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 5,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.4707108363207244,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 10,
+      "n_topics": 33,
+      "n_outliers": 695,
+      "coherence_cv": 0.568212674163891,
+      "irbo": 0.9943834463768038
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 10,
+      "n_topics": 25,
+      "n_outliers": 634,
+      "coherence_cv": 0.5831315334692081,
+      "irbo": 0.9951244719554285
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 10,
+      "n_topics": 22,
+      "n_outliers": 664,
+      "coherence_cv": 0.5843620017505805,
+      "irbo": 0.9953039243138528
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 10,
+      "n_topics": 23,
+      "n_outliers": 611,
+      "coherence_cv": 0.5489544076492181,
+      "irbo": 0.9937782551981931
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.45266924307908485,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.47071083632072436,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 10,
+      "n_topics": 3,
+      "n_outliers": 0,
+      "coherence_cv": 0.6184929159304026,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.47071083632072436,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.4707108363207244,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 15,
+      "n_topics": 4,
+      "n_outliers": 6,
+      "coherence_cv": 0.5379251947936954,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.45266924307908485,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.47071083632072436,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 15,
+      "n_topics": 4,
+      "n_outliers": 3,
+      "coherence_cv": 0.5236380612031547,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.45266924307908485,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 15,
+      "n_topics": 3,
+      "n_outliers": 0,
+      "coherence_cv": 0.5917916686027658,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 15,
+      "n_topics": 3,
+      "n_outliers": 0,
+      "coherence_cv": 0.6184929159304026,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 15,
+      "n_topics": 3,
+      "n_outliers": 0,
+      "coherence_cv": 0.6038193974305255,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.4707108363207244,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 20,
+      "n_topics": 3,
+      "n_outliers": 6,
+      "coherence_cv": 0.6032127433882554,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 20,
+      "n_topics": 3,
+      "n_outliers": 0,
+      "coherence_cv": 0.5885392248883782,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.47071083632072436,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.45266924307908485,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.45266924307908485,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.47071083632072436,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 20,
+      "n_topics": 3,
+      "n_outliers": 0,
+      "coherence_cv": 0.6184929159304026,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 20,
+      "n_topics": 3,
+      "n_outliers": 0,
+      "coherence_cv": 0.6038193974305255,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 0,
+      "coherence_cv": 0.4707108363207244,
+      "irbo": 1.0
+    }
+  ],
+  "Medicine": [
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 2,
+      "n_topics": 24,
+      "n_outliers": 792,
+      "coherence_cv": 0.6836736173166547,
+      "irbo": 0.9996155966229814
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 2,
+      "n_topics": 114,
+      "n_outliers": 825,
+      "coherence_cv": 0.7017024799328533,
+      "irbo": 0.9993786945925253
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 2,
+      "n_topics": 213,
+      "n_outliers": 944,
+      "coherence_cv": 0.6932078411160304,
+      "irbo": 0.9994545631412822
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 2,
+      "n_topics": 158,
+      "n_outliers": 1004,
+      "coherence_cv": 0.7024360858740822,
+      "irbo": 0.9994211759410805
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 2,
+      "n_topics": 205,
+      "n_outliers": 1092,
+      "coherence_cv": 0.6904061483182423,
+      "irbo": 0.9995547813112006
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 2,
+      "n_topics": 32,
+      "n_outliers": 1155,
+      "coherence_cv": 0.668056580770588,
+      "irbo": 0.9994661053381336
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 2,
+      "n_topics": 88,
+      "n_outliers": 1120,
+      "coherence_cv": 0.6789543930921214,
+      "irbo": 0.9995154499437685
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 2,
+      "n_topics": 94,
+      "n_outliers": 1166,
+      "coherence_cv": 0.7341171456830166,
+      "irbo": 0.9996322287926889
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 2,
+      "n_topics": 187,
+      "n_outliers": 1174,
+      "coherence_cv": 0.7056259421207979,
+      "irbo": 0.9994894935585404
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 3,
+      "n_topics": 9,
+      "n_outliers": 944,
+      "coherence_cv": 0.5129538721314432,
+      "irbo": 0.9972093703880952
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 3,
+      "n_topics": 115,
+      "n_outliers": 1055,
+      "coherence_cv": 0.6646572235911573,
+      "irbo": 0.9992262046966561
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 3,
+      "n_topics": 103,
+      "n_outliers": 1246,
+      "coherence_cv": 0.661746584374518,
+      "irbo": 0.9992475314939633
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 3,
+      "n_topics": 158,
+      "n_outliers": 1246,
+      "coherence_cv": 0.6531607601574776,
+      "irbo": 0.9990487045660523
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 3,
+      "n_topics": 110,
+      "n_outliers": 1313,
+      "coherence_cv": 0.6642877010065519,
+      "irbo": 0.9991600847139598
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 3,
+      "n_topics": 147,
+      "n_outliers": 1446,
+      "coherence_cv": 0.6410716270757414,
+      "irbo": 0.9991637953634133
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 3,
+      "n_topics": 87,
+      "n_outliers": 1291,
+      "coherence_cv": 0.6387126042134631,
+      "irbo": 0.9989952646151381
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 3,
+      "n_topics": 74,
+      "n_outliers": 1361,
+      "coherence_cv": 0.6421335233086628,
+      "irbo": 0.9987792181468039
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 3,
+      "n_topics": 74,
+      "n_outliers": 1453,
+      "coherence_cv": 0.648867177446986,
+      "irbo": 0.9986691422534323
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 4,
+      "n_topics": 86,
+      "n_outliers": 1156,
+      "coherence_cv": 0.6421981703621984,
+      "irbo": 0.9988956348003614
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 4,
+      "n_topics": 51,
+      "n_outliers": 1231,
+      "coherence_cv": 0.6292574912259176,
+      "irbo": 0.9992088901253445
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 4,
+      "n_topics": 69,
+      "n_outliers": 1402,
+      "coherence_cv": 0.6610019543501459,
+      "irbo": 0.9989018106778177
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 4,
+      "n_topics": 118,
+      "n_outliers": 1354,
+      "coherence_cv": 0.6497786552600227,
+      "irbo": 0.9985382545327282
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 4,
+      "n_topics": 71,
+      "n_outliers": 1427,
+      "coherence_cv": 0.6286893502200064,
+      "irbo": 0.9988941709318713
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 4,
+      "n_topics": 48,
+      "n_outliers": 1475,
+      "coherence_cv": 0.6562745008590817,
+      "irbo": 0.9988381649738601
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 4,
+      "n_topics": 92,
+      "n_outliers": 1416,
+      "coherence_cv": 0.6156594863102884,
+      "irbo": 0.9984320509135163
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 4,
+      "n_topics": 54,
+      "n_outliers": 1493,
+      "coherence_cv": 0.6310235770569437,
+      "irbo": 0.9992449186380653
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 4,
+      "n_topics": 70,
+      "n_outliers": 1509,
+      "coherence_cv": 0.6324755654332204,
+      "irbo": 0.998629344972471
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 5,
+      "n_topics": 75,
+      "n_outliers": 1294,
+      "coherence_cv": 0.6128812379174433,
+      "irbo": 0.9981470389000795
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 5,
+      "n_topics": 65,
+      "n_outliers": 1396,
+      "coherence_cv": 0.6227325877092628,
+      "irbo": 0.9986618164905494
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 5,
+      "n_topics": 100,
+      "n_outliers": 1393,
+      "coherence_cv": 0.625708548312258,
+      "irbo": 0.9976842659400148
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 5,
+      "n_topics": 65,
+      "n_outliers": 1407,
+      "coherence_cv": 0.6493920991943015,
+      "irbo": 0.998649405087268
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 5,
+      "n_topics": 67,
+      "n_outliers": 1465,
+      "coherence_cv": 0.6237653482023877,
+      "irbo": 0.9987490349623313
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 5,
+      "n_topics": 55,
+      "n_outliers": 1578,
+      "coherence_cv": 0.6450582997485621,
+      "irbo": 0.9983173761089273
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 5,
+      "n_topics": 58,
+      "n_outliers": 1560,
+      "coherence_cv": 0.6519246844101221,
+      "irbo": 0.9986483214772035
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 5,
+      "n_topics": 38,
+      "n_outliers": 1593,
+      "coherence_cv": 0.6134986830673583,
+      "irbo": 0.9990534530921561
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 5,
+      "n_topics": 63,
+      "n_outliers": 1644,
+      "coherence_cv": 0.6043357675552514,
+      "irbo": 0.9976810765123172
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 8,
+      "coherence_cv": 0.6245329073624314,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 8,
+      "coherence_cv": 0.6245329073624314,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 8,
+      "coherence_cv": 0.6245329073624314,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 8,
+      "coherence_cv": 0.6245329073624314,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 17,
+      "coherence_cv": 0.6245329073624314,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 10,
+      "n_topics": 34,
+      "n_outliers": 1660,
+      "coherence_cv": 0.6326845279891257,
+      "irbo": 0.9946037620909459
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 10,
+      "n_topics": 2,
+      "n_outliers": 17,
+      "coherence_cv": 0.6245329073624314,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 10,
+      "n_topics": 23,
+      "n_outliers": 1621,
+      "coherence_cv": 0.610150135823035,
+      "irbo": 0.995710141076341
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 10,
+      "n_topics": 30,
+      "n_outliers": 1486,
+      "coherence_cv": 0.6472436887720489,
+      "irbo": 0.9892215603987521
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 69,
+      "coherence_cv": 0.46257198937136523,
+      "irbo": 0.9860762458
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 15,
+      "n_topics": 11,
+      "n_outliers": 1473,
+      "coherence_cv": 0.5884586027483176,
+      "irbo": 0.9878298619093506
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 15,
+      "n_topics": 22,
+      "n_outliers": 1736,
+      "coherence_cv": 0.5897076013884782,
+      "irbo": 0.9936434844993953
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 15,
+      "n_topics": 2,
+      "n_outliers": 32,
+      "coherence_cv": 0.46257198937136523,
+      "irbo": 0.9794332333
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 15,
+      "n_topics": 12,
+      "n_outliers": 1336,
+      "coherence_cv": 0.5559741776654445,
+      "irbo": 0.9934567495287879
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 15,
+      "n_topics": 18,
+      "n_outliers": 1625,
+      "coherence_cv": 0.5954622810711352,
+      "irbo": 0.995062605283961
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 15,
+      "n_topics": 3,
+      "n_outliers": 1550,
+      "coherence_cv": 0.44269291128453386,
+      "irbo": 0.9718235286142857
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 15,
+      "n_topics": 19,
+      "n_outliers": 1614,
+      "coherence_cv": 0.6069600775977947,
+      "irbo": 0.9898446970882763
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 15,
+      "n_topics": 14,
+      "n_outliers": 1548,
+      "coherence_cv": 0.6168770499872758,
+      "irbo": 0.9924751639827665
+    },
+    {
+      "n_neighbors": 5,
+      "min_cluster_size": 20,
+      "n_topics": 12,
+      "n_outliers": 692,
+      "coherence_cv": 0.5826614694553359,
+      "irbo": 0.9882492513800866
+    },
+    {
+      "n_neighbors": 7,
+      "min_cluster_size": 20,
+      "n_topics": 3,
+      "n_outliers": 236,
+      "coherence_cv": 0.3853077572480554,
+      "irbo": 0.9834769650571429
+    },
+    {
+      "n_neighbors": 10,
+      "min_cluster_size": 20,
+      "n_topics": 23,
+      "n_outliers": 1807,
+      "coherence_cv": 0.6278295348883062,
+      "irbo": 0.9846511288683544
+    },
+    {
+      "n_neighbors": 12,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 32,
+      "coherence_cv": 0.46257198937136523,
+      "irbo": 0.9794332333
+    },
+    {
+      "n_neighbors": 15,
+      "min_cluster_size": 20,
+      "n_topics": 15,
+      "n_outliers": 1411,
+      "coherence_cv": 0.6584552119791625,
+      "irbo": 0.9856733652728495
+    },
+    {
+      "n_neighbors": 18,
+      "min_cluster_size": 20,
+      "n_topics": 3,
+      "n_outliers": 131,
+      "coherence_cv": 0.5725057798321377,
+      "irbo": 0.9931444111
+    },
+    {
+      "n_neighbors": 20,
+      "min_cluster_size": 20,
+      "n_topics": 2,
+      "n_outliers": 97,
+      "coherence_cv": 0.6351493424988486,
+      "irbo": 1.0
+    },
+    {
+      "n_neighbors": 25,
+      "min_cluster_size": 20,
+      "n_topics": 11,
+      "n_outliers": 1702,
+      "coherence_cv": 0.6064523036021899,
+      "irbo": 0.9878083932592785
+    },
+    {
+      "n_neighbors": 30,
+      "min_cluster_size": 20,
+      "n_topics": 3,
+      "n_outliers": 158,
+      "coherence_cv": 0.5387325390606952,
+      "irbo": 0.9913729411
+    }
+  ]
+}

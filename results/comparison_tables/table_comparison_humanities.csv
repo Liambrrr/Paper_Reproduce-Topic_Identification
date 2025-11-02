@@ -1,0 +1,5 @@
+Group,Model,Paper_Topics,Paper_Coherence,Paper_IRBO,Our_Topics,Our_Coherence,Our_IRBO,Diff_Topics,Diff_Coherence,Diff_Coherence_Pct,Diff_IRBO
+Humanities,LDA,18.0,0.455,0.972,5,0.564,0.991,-13,+0.109,+24.0%,+0.019
+Humanities,LSI,6.0,0.455,0.85,8,0.444,0.843,2,-0.011,-2.4%,-0.007
+Humanities,NMF,8.0,0.658,0.967,8,0.666,0.999,0,+0.008,+1.2%,+0.032
+Humanities,BERTopic,17.0,0.689,0.99,22,0.6693,0.999,5,-0.020,-2.9%,+0.009

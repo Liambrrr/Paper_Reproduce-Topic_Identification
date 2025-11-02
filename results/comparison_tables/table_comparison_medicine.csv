@@ -1,0 +1,5 @@
+Group,Model,Paper_Topics,Paper_Coherence,Paper_IRBO,Our_Topics,Our_Coherence,Our_IRBO,Diff_Topics,Diff_Coherence,Diff_Coherence_Pct,Diff_IRBO
+Medicine,LDA,2.0,0.517,1.0,4,0.599,0.963,2,+0.082,+15.9%,-0.037
+Medicine,LSI,6.0,0.499,0.427,3,0.405,0.641,-3,-0.094,-18.8%,+0.214
+Medicine,NMF,6.0,0.755,1.0,5,0.665,0.998,-1,-0.090,-11.9%,-0.002
+Medicine,BERTopic,37.0,0.604,1.0,94,0.7341,0.9996,57,+0.130,+21.5%,-0.000

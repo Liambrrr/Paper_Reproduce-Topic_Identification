@@ -1,0 +1,18 @@
+{
+  "All": {
+    "n_neighbors": 18,
+    "min_cluster_size": 2
+  },
+  "Education": {
+    "n_neighbors": 30,
+    "min_cluster_size": 2
+  },
+  "Humanities": {
+    "n_neighbors": 25,
+    "min_cluster_size": 2
+  },
+  "Medicine": {
+    "n_neighbors": 25,
+    "min_cluster_size": 2
+  }
+}

@@ -1,0 +1,5 @@
+,n_topics,n_outliers,coherence_cv,irbo,n_posts,n_neighbors,min_cluster_size
+All,161.0,1823.0,0.6923,0.9995,6416.0,18.0,2.0
+Education,25.0,132.0,0.6722,0.991,461.0,30.0,2.0
+Humanities,22.0,661.0,0.6693,0.999,2476.0,25.0,2.0
+Medicine,94.0,1166.0,0.7341,0.9996,3478.0,25.0,2.0

@@ -1,0 +1,13 @@
+group,model,n_topics,coherence_cv,irbo,n_posts
+All,LDA,11,0.5347,0.9909,6416
+All,LSI,7,0.4629,0.8624,6416
+All,NMF,5,0.6948,0.9986,6416
+Education,LDA,6,0.4646,0.8187,461
+Education,LSI,3,0.5572,0.8248,461
+Education,NMF,3,0.5792,0.9946,461
+Humanities,LDA,5,0.5637,0.9911,2476
+Humanities,LSI,8,0.4435,0.8427,2476
+Humanities,NMF,8,0.6662,0.9991,2476
+Medicine,LDA,4,0.5986,0.9631,3478
+Medicine,LSI,3,0.4046,0.6413,3478
+Medicine,NMF,5,0.6653,0.9982,3478

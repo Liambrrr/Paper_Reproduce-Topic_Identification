@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+*.egg-info/
+
+# Generated data
+data/
+models/
+
+# Intermediate results (keep final outputs)
+results/grid_search_*_detailed.png
+results/bertopic_evaluation_summary.png
+results/topic_quality_tradeoff.png
+results/topic_visualization_*.html
+results/model_comparison_all_groups.png
+results/model_comparison_summary.png
+
+# Keep paper-style outputs
+!results/fig6_*.png
+!results/fig2_*.png
+!results/table*.csv
+!results/topic_word_scores.png
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Old/backup files
+results_summary.csv

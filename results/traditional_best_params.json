@@ -1,0 +1,14 @@
+{
+  "All_LDA": 11,
+  "All_LSI": 7,
+  "All_NMF": 5,
+  "Education_LDA": 6,
+  "Education_LSI": 3,
+  "Education_NMF": 3,
+  "Humanities_LDA": 5,
+  "Humanities_LSI": 8,
+  "Humanities_NMF": 8,
+  "Medicine_LDA": 4,
+  "Medicine_LSI": 3,
+  "Medicine_NMF": 5
+}
