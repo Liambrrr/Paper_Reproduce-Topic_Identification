@@ -92,41 +92,39 @@ def file_tag_group(path: str, prefix: str) -> Tuple[Optional[str], Optional[str]
     return (group, tag)
 
 def collect_step12(metrics_dir: str, only_groups: List[str]) -> Dict[str, Dict[str, List[float]]]:
-    """Return map[group][model_tag] -> list of centroid_cosine across topics."""
+    """Map[group][model_tag] -> list of centroid cosine across topics."""
     out: Dict[str, Dict[str, List[float]]] = {g: {} for g in only_groups}
+    import glob, math
     for path in glob.glob(os.path.join(metrics_dir, "centroid_sim_*.jsonl")):
         g, tag = file_tag_group(path, "centroid_sim_")
         if not g or g not in only_groups:
             continue
-        rows = read_jsonl(path)
-        vals: List[float] = []
-        for r in rows:
-            m = (r.get("metrics") or {})
-            val = m.get("centroid_cosine")
-            if isinstance(val, (int, float)) and not math.isnan(val):
-                vals.append(float(val))
-        if tag not in out[g]:
-            out[g][tag] = []
-        out[g][tag].extend(vals)
+        vals = []
+        for r in read_jsonl(path):
+            v = r.get("cosine")
+            if isinstance(v, (int, float)) and not math.isnan(v):
+                vals.append(v)
+        if vals:
+            out[g].setdefault(tag, []).extend(vals)
     return out
 
+
 def collect_step13(metrics_dir: str, only_groups: List[str]) -> Dict[str, Dict[str, List[float]]]:
-    """Return map[group][model_tag] -> list of doc_cosine.mean across topics."""
+    """Map[group][model_tag] -> list of doc mean cosine across topics."""
     out: Dict[str, Dict[str, List[float]]] = {g: {} for g in only_groups}
+    import glob, math
     for path in glob.glob(os.path.join(metrics_dir, "doc_sim_*.jsonl")):
         g, tag = file_tag_group(path, "doc_sim_")
         if not g or g not in only_groups:
             continue
-        rows = read_jsonl(path)
-        vals: List[float] = []
-        for r in rows:
-            d = (r.get("doc_cosine") or {})
-            val = d.get("mean")
-            if isinstance(val, (int, float)) and not math.isnan(val):
-                vals.append(float(val))
-        if tag not in out[g]:
-            out[g][tag] = []
-        out[g][tag].extend(vals)
+        vals = []
+        for r in read_jsonl(path):
+            stats = r.get("stats") or {}
+            v = stats.get("mean")
+            if isinstance(v, (int, float)) and not math.isnan(v):
+                vals.append(v)
+        if vals:
+            out[g].setdefault(tag, []).extend(vals)
     return out
 
 def collect_step14(metrics_dir: str, only_groups: List[str]) -> Tuple[Dict[str, Dict[str, List[float]]],
