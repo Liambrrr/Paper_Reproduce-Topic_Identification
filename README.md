@@ -1,6 +1,6 @@
 # Weekly Progress Report
 
-**Date:** _(insert date here)_  
+**Date:** Nov 3, 2025
 **Project:** Paper_Reproduce-Topic_Identification  
 **Author:** Liam Tang  
 
@@ -41,7 +41,7 @@ However, the following model failed to return valid responses (error instead of 
   "finish_reason": "length",
   "usage": {"prompt_tokens": 489, "completion_tokens": 32, "total_tokens": 521}
 }
-
+```
 #### Example (Accepted)
 ```json
 "response": {
@@ -49,7 +49,7 @@ However, the following model failed to return valid responses (error instead of 
   "finish_reason": "stop",
   "usage": {"prompt_tokens": 328, "completion_tokens": 31, "total_tokens": 359}
 }
-
+```
 ## Questions and Clarifications
 
 ### 1. Model Access
