@@ -1,0 +1,24 @@
+{"group": "B", "topic_id": 0, "topic_size": 101, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "peer review issues", "cosine": 0.42677122354507446}
+{"group": "B", "topic_id": 1, "topic_size": 93, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "math learning strategies", "cosine": 0.5266178250312805}
+{"group": "B", "topic_id": 2, "topic_size": 30, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "video access issues", "cosine": 0.5949065089225769}
+{"group": "B", "topic_id": 3, "topic_size": 9, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "formatting issues", "cosine": 0.4112713634967804}
+{"group": "B", "topic_id": 4, "topic_size": 9, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "submission issues", "cosine": 0.5751153230667114}
+{"group": "B", "topic_id": 5, "topic_size": 8, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "peer feedback", "cosine": 0.7089813947677612}
+{"group": "B", "topic_id": 6, "topic_size": 8, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "credit issues", "cosine": 0.6026413440704346}
+{"group": "B", "topic_id": 7, "topic_size": 8, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "progress issues", "cosine": 0.6808816194534302}
+{"group": "B", "topic_id": 8, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "survey issues", "cosine": 0.6697463989257812}
+{"group": "B", "topic_id": 9, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "video captions needed", "cosine": 0.6682313084602356}
+{"group": "B", "topic_id": 10, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "painting problem", "cosine": 0.49762240052223206}
+{"group": "B", "topic_id": 11, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "firefox issues", "cosine": 0.5575613975524902}
+{"group": "B", "topic_id": 12, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "survey issues", "cosine": 0.8232945203781128}
+{"group": "B", "topic_id": 13, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "certificate download", "cosine": 0.7338094711303711}
+{"group": "B", "topic_id": 14, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "accidental submissions", "cosine": 0.5519128441810608}
+{"group": "B", "topic_id": 15, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "certificate completion", "cosine": 0.6645719408988953}
+{"group": "B", "topic_id": 17, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "submission issues", "cosine": 0.816156268119812}
+{"group": "B", "topic_id": 18, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "feedback agreement", "cosine": 0.6200147867202759}
+{"group": "B", "topic_id": 19, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "tech issues during session", "cosine": 0.589000403881073}
+{"group": "B", "topic_id": 20, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "feedback & comments", "cosine": 0.4779072701931}
+{"group": "B", "topic_id": 21, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "forum fix", "cosine": 0.4119495451450348}
+{"group": "B", "topic_id": 22, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "discussion discouragement", "cosine": 0.5013297200202942}
+{"group": "B", "topic_id": 23, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "scrolling video issues", "cosine": 0.48648858070373535}
+{"group": "B", "topic_id": 24, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "course resources", "cosine": 0.7008849382400513}

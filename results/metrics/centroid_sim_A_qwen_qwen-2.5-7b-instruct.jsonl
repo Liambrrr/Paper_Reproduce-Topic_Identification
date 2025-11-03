@@ -1,0 +1,148 @@
+{"group": "A", "topic_id": 0, "topic_size": 3255, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "course queries", "cosine": 0.45545610785484314}
+{"group": "A", "topic_id": 3, "topic_size": 39, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "bootstrap errors", "cosine": 0.5891206860542297}
+{"group": "A", "topic_id": 4, "topic_size": 22, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "spline regression", "cosine": 0.6715169548988342}
+{"group": "A", "topic_id": 5, "topic_size": 21, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "piazza access issues", "cosine": 0.7274596691131592}
+{"group": "A", "topic_id": 6, "topic_size": 19, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "rdata loading issues", "cosine": 0.5668123960494995}
+{"group": "A", "topic_id": 7, "topic_size": 19, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "economic growth", "cosine": 0.7198463082313538}
+{"group": "A", "topic_id": 8, "topic_size": 17, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "audio volume issues", "cosine": 0.697399377822876}
+{"group": "A", "topic_id": 9, "topic_size": 17, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "correlation analysis", "cosine": 0.7287856936454773}
+{"group": "A", "topic_id": 10, "topic_size": 16, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "session issues", "cosine": 0.550104022026062}
+{"group": "A", "topic_id": 11, "topic_size": 15, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "coffee & tea correlation", "cosine": 0.6207898855209351}
+{"group": "A", "topic_id": 12, "topic_size": 14, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "tech support emails", "cosine": 0.6716828346252441}
+{"group": "A", "topic_id": 13, "topic_size": 13, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "hypercube dimensions", "cosine": 0.6694545745849609}
+{"group": "A", "topic_id": 14, "topic_size": 12, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "problem solving", "cosine": 0.5906240344047546}
+{"group": "A", "topic_id": 15, "topic_size": 12, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "combinations in cards", "cosine": 0.6284018754959106}
+{"group": "A", "topic_id": 16, "topic_size": 11, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "person years follow", "cosine": 0.7458321452140808}
+{"group": "A", "topic_id": 17, "topic_size": 11, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "scpd submission", "cosine": 0.7717933654785156}
+{"group": "A", "topic_id": 18, "topic_size": 11, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "article access", "cosine": 0.8126844167709351}
+{"group": "A", "topic_id": 19, "topic_size": 10, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "p-values and associations", "cosine": 0.39083999395370483}
+{"group": "A", "topic_id": 20, "topic_size": 10, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "data analysis software", "cosine": 0.8044906854629517}
+{"group": "A", "topic_id": 21, "topic_size": 9, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "lottery expected value", "cosine": 0.7494925856590271}
+{"group": "A", "topic_id": 22, "topic_size": 9, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "redundancy in modules", "cosine": 0.6326702237129211}
+{"group": "A", "topic_id": 23, "topic_size": 9, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "rent control debate", "cosine": 0.6524555683135986}
+{"group": "A", "topic_id": 24, "topic_size": 8, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "nba player decision", "cosine": 0.4841573238372803}
+{"group": "A", "topic_id": 25, "topic_size": 8, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "download issues", "cosine": 0.6214497685432434}
+{"group": "A", "topic_id": 26, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "decision trees", "cosine": 0.5538601875305176}
+{"group": "A", "topic_id": 27, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "browser compatibility issues", "cosine": 0.5435171723365784}
+{"group": "A", "topic_id": 28, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "sampling techniques", "cosine": 0.6054571270942688}
+{"group": "A", "topic_id": 29, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "exercises and answers", "cosine": 0.7748069167137146}
+{"group": "A", "topic_id": 30, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "ordinal categorical data", "cosine": 0.7534456253051758}
+{"group": "A", "topic_id": 31, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "covariance matrix", "cosine": 0.760231077671051}
+{"group": "A", "topic_id": 32, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "pain meningitis", "cosine": 0.5630201101303101}
+{"group": "A", "topic_id": 33, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "tea and sugar", "cosine": 0.6036199331283569}
+{"group": "A", "topic_id": 34, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "verb meaning discussion", "cosine": 0.7385969161987305}
+{"group": "A", "topic_id": 35, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "normal approximation", "cosine": 0.6213102340698242}
+{"group": "A", "topic_id": 36, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "oob vs test", "cosine": 0.5103906989097595}
+{"group": "A", "topic_id": 37, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "halt study", "cosine": 0.789029061794281}
+{"group": "A", "topic_id": 38, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "autism recent changes", "cosine": 0.7404354810714722}
+{"group": "A", "topic_id": 39, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "survival probability", "cosine": 0.7025203108787537}
+{"group": "A", "topic_id": 40, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "oil price analysis", "cosine": 0.7291747331619263}
+{"group": "A", "topic_id": 41, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "access issues", "cosine": 0.820495069026947}
+{"group": "A", "topic_id": 42, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "confidence intervals", "cosine": 0.6168732047080994}
+{"group": "A", "topic_id": 43, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "parkinsons toluene", "cosine": 0.3469318449497223}
+{"group": "A", "topic_id": 44, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "slope intercept question", "cosine": 0.8313736915588379}
+{"group": "A", "topic_id": 45, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "reaction times", "cosine": 0.6295778751373291}
+{"group": "A", "topic_id": 46, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "random forests", "cosine": 0.5969269871711731}
+{"group": "A", "topic_id": 47, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "matrix syntax issues", "cosine": 0.7859781980514526}
+{"group": "A", "topic_id": 48, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "electron trajectories", "cosine": 0.6578999757766724}
+{"group": "A", "topic_id": 49, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "spinal cord injuries", "cosine": 0.7928366661071777}
+{"group": "A", "topic_id": 50, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "firms enter exit market", "cosine": 0.5853263139724731}
+{"group": "A", "topic_id": 51, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "missing homework answers", "cosine": 0.475737988948822}
+{"group": "A", "topic_id": 52, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "email inquiries", "cosine": 0.6612985730171204}
+{"group": "A", "topic_id": 53, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "accreditation concerns", "cosine": 0.1702091246843338}
+{"group": "A", "topic_id": 54, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "logarithms in math", "cosine": 0.6677460670471191}
+{"group": "A", "topic_id": 55, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "quick summary sheets", "cosine": 0.7089276909828186}
+{"group": "A", "topic_id": 56, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "problem solved", "cosine": 0.668978214263916}
+{"group": "A", "topic_id": 57, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "frequency data study", "cosine": 0.7144946455955505}
+{"group": "A", "topic_id": 58, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "multiple births calculation", "cosine": 0.7194639444351196}
+{"group": "A", "topic_id": 59, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "ipad issues", "cosine": 0.7712331414222717}
+{"group": "A", "topic_id": 60, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "regression analysis", "cosine": 0.4302181601524353}
+{"group": "A", "topic_id": 61, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "nonlinear vs linear models", "cosine": 0.5484720468521118}
+{"group": "A", "topic_id": 63, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "donor calculation", "cosine": 0.7619113326072693}
+{"group": "A", "topic_id": 64, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "model selection", "cosine": 0.38005775213241577}
+{"group": "A", "topic_id": 65, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "typos and errors", "cosine": 0.6153639554977417}
+{"group": "A", "topic_id": 66, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "graph errors", "cosine": 0.7103317379951477}
+{"group": "A", "topic_id": 67, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "tech issues", "cosine": 0.31427767872810364}
+{"group": "A", "topic_id": 68, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "tables figures", "cosine": 0.6022016406059265}
+{"group": "A", "topic_id": 69, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "units discrepancy", "cosine": 0.7726032733917236}
+{"group": "A", "topic_id": 70, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "editing exercises", "cosine": 0.6294178366661072}
+{"group": "A", "topic_id": 71, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "height distribution", "cosine": 0.5384305119514465}
+{"group": "A", "topic_id": 72, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "download issues", "cosine": 0.5959888100624084}
+{"group": "A", "topic_id": 73, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "pca regression", "cosine": 0.598773717880249}
+{"group": "A", "topic_id": 74, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "fitted getting", "cosine": 0.7026811242103577}
+{"group": "A", "topic_id": 75, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "book discount inquiry", "cosine": 0.7398055195808411}
+{"group": "A", "topic_id": 76, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "degrees of freedom", "cosine": 0.6028096079826355}
+{"group": "A", "topic_id": 77, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "typos and colloquial", "cosine": 0.6570336818695068}
+{"group": "A", "topic_id": 78, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "seizures treatment", "cosine": 0.6795740723609924}
+{"group": "A", "topic_id": 79, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "utility numbers", "cosine": 0.8038004040718079}
+{"group": "A", "topic_id": 80, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "rubric buttons", "cosine": 0.7988935112953186}
+{"group": "A", "topic_id": 81, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "unsatisfied previous", "cosine": 0.3072280287742615}
+{"group": "A", "topic_id": 82, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "opportunity cost", "cosine": 0.4057522416114807}
+{"group": "A", "topic_id": 83, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "data submission issues", "cosine": 0.3497840464115143}
+{"group": "A", "topic_id": 84, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "dice rolling probability", "cosine": 0.8129628300666809}
+{"group": "A", "topic_id": 85, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "sign confusion", "cosine": 0.6291224360466003}
+{"group": "A", "topic_id": 87, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "graph analysis", "cosine": 0.4844791293144226}
+{"group": "A", "topic_id": 88, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "previous work dissatisfaction", "cosine": 0.3669446110725403}
+{"group": "A", "topic_id": 89, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "scientific writing", "cosine": 0.5880935192108154}
+{"group": "A", "topic_id": 90, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "phd thesis writing", "cosine": 0.6584256887435913}
+{"group": "A", "topic_id": 92, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "capitalization issues", "cosine": 0.7279007434844971}
+{"group": "A", "topic_id": 93, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "binary variables", "cosine": 0.6794530153274536}
+{"group": "A", "topic_id": 94, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "value updates", "cosine": 0.6507707238197327}
+{"group": "A", "topic_id": 97, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "howcome answers", "cosine": 0.6612993478775024}
+{"group": "A", "topic_id": 98, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "percentages decimals", "cosine": 0.6588180065155029}
+{"group": "A", "topic_id": 99, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "signrank test", "cosine": 0.4937936067581177}
+{"group": "A", "topic_id": 100, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "brain spinal cord injuries", "cosine": 0.553041934967041}
+{"group": "A", "topic_id": 101, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "antiinflammatory drugs", "cosine": 0.6067848205566406}
+{"group": "A", "topic_id": 102, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "vaccine simulations", "cosine": 0.8276683688163757}
+{"group": "A", "topic_id": 103, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "recruitment and participation", "cosine": 0.5993669629096985}
+{"group": "A", "topic_id": 104, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "magnitude curve shift", "cosine": 0.689792811870575}
+{"group": "A", "topic_id": 105, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "speed issues", "cosine": 0.6162226796150208}
+{"group": "A", "topic_id": 106, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "copy paste glitch", "cosine": 0.6028439998626709}
+{"group": "A", "topic_id": 107, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "section issues", "cosine": 0.7483311891555786}
+{"group": "A", "topic_id": 108, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "lesson disappearance", "cosine": 0.7448834180831909}
+{"group": "A", "topic_id": 109, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "module repetition", "cosine": 0.38606953620910645}
+{"group": "A", "topic_id": 110, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "model variance error", "cosine": 0.5865716338157654}
+{"group": "A", "topic_id": 111, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "spline fitting", "cosine": 0.4646928906440735}
+{"group": "A", "topic_id": 112, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "toy data examples", "cosine": 0.5239627957344055}
+{"group": "A", "topic_id": 114, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "beta normal vectors", "cosine": 0.3723328709602356}
+{"group": "A", "topic_id": 115, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "bone health", "cosine": 0.5098998546600342}
+{"group": "A", "topic_id": 116, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "linear vs nonlinear", "cosine": 0.46939241886138916}
+{"group": "A", "topic_id": 117, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "squared betas", "cosine": 0.7192425727844238}
+{"group": "A", "topic_id": 118, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "tech issues", "cosine": 0.2385978400707245}
+{"group": "A", "topic_id": 119, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "confused about images", "cosine": 0.5850206017494202}
+{"group": "A", "topic_id": 120, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "patient diagnosis", "cosine": 0.47347283363342285}
+{"group": "A", "topic_id": 121, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "margin tolerance", "cosine": 0.3981877267360687}
+{"group": "A", "topic_id": 122, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "economic models", "cosine": 0.3004136085510254}
+{"group": "A", "topic_id": 124, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "estimator calculation", "cosine": 0.5905979871749878}
+{"group": "A", "topic_id": 125, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "generalized crossvalidation", "cosine": 0.7300755977630615}
+{"group": "A", "topic_id": 126, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "basis functions", "cosine": 0.802418053150177}
+{"group": "A", "topic_id": 127, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "negative power", "cosine": 0.38477396965026855}
+{"group": "A", "topic_id": 128, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "wave explanations", "cosine": 0.3819795250892639}
+{"group": "A", "topic_id": 129, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "irreducible variance", "cosine": 0.5071200728416443}
+{"group": "A", "topic_id": 130, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "demo editing issues", "cosine": 0.46718308329582214}
+{"group": "A", "topic_id": 131, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "singular fit error", "cosine": 0.6414671540260315}
+{"group": "A", "topic_id": 132, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "mse prediction", "cosine": 0.5400059819221497}
+{"group": "A", "topic_id": 133, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "fick equation", "cosine": 0.6078376770019531}
+{"group": "A", "topic_id": 134, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "mooc interface issues", "cosine": 0.282671183347702}
+{"group": "A", "topic_id": 135, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "variable errors", "cosine": 0.6966227293014526}
+{"group": "A", "topic_id": 136, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "verb revision", "cosine": 0.5022452473640442}
+{"group": "A", "topic_id": 137, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "enunciation requirements", "cosine": 0.5774571299552917}
+{"group": "A", "topic_id": 138, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "price elasticity", "cosine": 0.4998525381088257}
+{"group": "A", "topic_id": 139, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "line breaks issue", "cosine": 0.35616248846054077}
+{"group": "A", "topic_id": 140, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "bagging models", "cosine": 0.3034641742706299}
+{"group": "A", "topic_id": 143, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "absolute distance", "cosine": 0.34793975949287415}
+{"group": "A", "topic_id": 144, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "data loading issues", "cosine": 0.32829388976097107}
+{"group": "A", "topic_id": 145, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "indexing and errors", "cosine": 0.21914930641651154}
+{"group": "A", "topic_id": 146, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "significant variables", "cosine": 0.33552002906799316}
+{"group": "A", "topic_id": 147, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "logistic regression issues", "cosine": 0.5139224529266357}
+{"group": "A", "topic_id": 148, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "issue fixed", "cosine": 0.7810570001602173}
+{"group": "A", "topic_id": 149, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "negative mean squared", "cosine": 0.7903510332107544}
+{"group": "A", "topic_id": 151, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "prescriptive norms", "cosine": 0.23136675357818604}
+{"group": "A", "topic_id": 152, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "format question", "cosine": 0.4629751443862915}
+{"group": "A", "topic_id": 153, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "regression analysis", "cosine": 0.37141457200050354}
+{"group": "A", "topic_id": 155, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "office hours query", "cosine": 0.6313761472702026}
+{"group": "A", "topic_id": 156, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "binary variables explanation", "cosine": 0.49152132868766785}
+{"group": "A", "topic_id": 157, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "calculus help", "cosine": 0.3905930519104004}
+{"group": "A", "topic_id": 158, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "data loading errors", "cosine": 0.5949079394340515}
+{"group": "A", "topic_id": 159, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "beta equation derivation", "cosine": 0.739761233329773}
+{"group": "A", "topic_id": 160, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "label": "confused values", "cosine": 0.47251656651496887}

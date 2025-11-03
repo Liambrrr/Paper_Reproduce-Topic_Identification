@@ -18,13 +18,9 @@ Steps **1–7** were adapted from [XqFeng-Josie/AI_Education_Paper_Replicate](ht
 ### 1. Model Updates
 Since some of the original models are unavailable or too large to host locally, the following **OpenRouter-accessible models** were used:
 
-- `meta-llama/llama-3.1-8b-instruct`  
-- `qwen/qwen2.5-coder-7b-instruct`  
+- `meta-llama/llama-3.1-8b-instruct`
+- `qwen/qwen2.5-7b-instruct`   
 - `qwen/qwen3-vl-30b-a3b-instruct`
-
-However, the following model failed to return valid responses (error instead of output):
-- `qwen/qwen2.5-coder-7b-instruct`  
-  → All samples were rejected, resulting in empty output files.
 
 ---
 
