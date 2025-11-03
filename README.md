@@ -21,7 +21,7 @@ Since some of the original models are unavailable or too large to host locally, 
 - `meta-llama/llama-3.1-8b-instruct`
 - `qwen/qwen2.5-7b-instruct`   
 - `qwen/qwen3-vl-30b-a3b-instruct`
-
+Temporary results are at results/metrics/summary_step15.md.
 ---
 
 ### 2. Step 11 – Validation and Normalization
