@@ -26,7 +26,7 @@ Temporary results are at results/metrics/summary_step15.md.
 
 ### 2. Step 11 – Validation and Normalization
 
-- Out of ~1,200 total samples, **only 92 were classified as clean**, while ~**1,100 were rejected**.  
+- Out of ~1,200 total samples, most are rejected.  
 - **Re-prompting was disabled** (`--reprompt 0`).  
 - The primary cause of rejection was **incomplete JSON outputs** — models often produced truncated rationales due to token limits.
 
