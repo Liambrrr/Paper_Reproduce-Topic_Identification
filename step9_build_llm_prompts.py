@@ -33,13 +33,7 @@ Each JSONL line contains:
 }
 
 Usage:
-  python step9_build_llm_prompts.py \
-    --topics-dir results/llm \
-    --outdir results/llm \
-    --only-groups A B C D \
-    --max-snippets 10 \
-    --max-snippet-chars 300 \
-    --include-variant-note 0
+  python step9_build_llm_prompts.py
 
 Notes
 - Deterministic decoding: temperature=0, top_p=1, max_new_tokens=32 (constant across models).
