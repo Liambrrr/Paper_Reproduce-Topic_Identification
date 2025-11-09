@@ -1,8 +1,8 @@
 """
 Step 10 - Run LLMs for multiple times and store raw outputs
 
-Reads prompts_{A|B|C|D}.jsonl from the previous step and, for each topic,
-calls each specified model exactly once and writes the raw responses to
+Reads prompts_{A|B|C|D}_op{1|2|3}.jsonl (or legacy prompts_{A|B|C|D}.jsonl for op1 fallback)
+and, for each topic, calls each specified model exactly once and writes the raw responses to
 separate JSONL files per (subset, model).
 
 Backends supported:
@@ -19,10 +19,10 @@ Inputs (defaults):
     - prompts_D.jsonl
 
 Outputs:
-  results/llm/labels_A_<model>.jsonl
-  results/llm/labels_B_<model>.jsonl
-  results/llm/labels_C_<model>.jsonl
-  results/llm/labels_D_<model>.jsonl
+  results/llm/labels_A_<model>_op{N}.jsonl
+  results/llm/labels_B_<model>_op{N}.jsonl
+  results/llm/labels_C_<model>_op{N}.jsonl
+  results/llm/labels_D_<model>_op{N}.jsonl
 
 Example usage:
 
@@ -31,7 +31,8 @@ Example usage:
     --provider openai-compatible \
     --api-base https://openrouter.ai/api\
     --api-key KEY \
-    --models llama-3.1-8b llama-3.3-70b-instruct qwen2.5-7b qwen3-30b
+    --models llama-3.1-8b \
+    --prompt_option 1
 """
 
 import argparse
@@ -79,23 +80,6 @@ def sanitize_model_tag(model: str) -> str:
     return model.replace("/", "_").replace(":", "-").replace(" ", "").lower()
 
 
-def join_messages_for_tgi(messages: List[Dict[str, str]]) -> str:
-    """Flatten system+user into a single prompt for TGI-like backends."""
-    sys_msgs = [m["content"] for m in messages if m.get("role") == "system"]
-    user_msgs = [m["content"] for m in messages if m.get("role") == "user"]
-    sys_block = ("\n".join(sys_msgs)).strip()
-    user_block = ("\n".join(user_msgs)).strip()
-    prompt = ""
-    if sys_block:
-        prompt += f"[SYSTEM]\n{sys_block}\n\n"
-    prompt += f"[USER]\n{user_block}"
-    return prompt
-
-
-# ---------------------------
-# Backend callers
-# ---------------------------
-
 def call_openai_compatible(model: str,
                            api_key: Optional[str],
                            api_base: str,
@@ -115,16 +99,15 @@ def call_openai_compatible(model: str,
     headers["X-Title"] = "Paper5 Topic Labeler"
 
     payload = {
-        "model": model,                               # e.g. meta-llama/llama-3.1-8b-instruct
-        "messages": messages,                         # [{role: system|user, content: "..."}]
-        "temperature": float(temperature),            # 0
-        "top_p": float(top_p),                        # 1
-        "max_tokens": int(max_new_tokens),            # ~32
+        "model": model,
+        "messages": messages,
+        "temperature": float(temperature),
+        "top_p": float(top_p),
+        "max_tokens": int(max_new_tokens),
     }
 
     r = requests.post(url, headers=headers, data=json.dumps(payload), timeout=120)
 
-    # surface error JSON to the caller so it’s written into your JSONL "error" field
     if r.status_code >= 400:
         try:
             err = r.json()
@@ -149,7 +132,6 @@ def call_ollama(model: str,
                 temperature: float,
                 top_p: float,
                 max_new_tokens: int) -> Dict[str, Any]:
-    # Ollama chat API
     url = api_base.rstrip("/") + "/api/chat"
     payload = {
         "model": model,
@@ -164,7 +146,6 @@ def call_ollama(model: str,
     r = requests.post(url, json=payload, timeout=120)
     r.raise_for_status()
     data = r.json()
-    # Ollama returns the final message at the end of message list
     text = ""
     if "message" in data and "content" in data["message"]:
         text = (data["message"]["content"] or "").strip()
@@ -196,12 +177,30 @@ def call_backend(provider: str,
         raise ValueError(f"Unknown provider: {provider}")
 
 
+def find_prompts_file(prompts_dir: str, group: str, prompt_option: int) -> Optional[str]:
+    """
+    For op1: prefer prompts_{G}_op1.jsonl; fallback to legacy prompts_{G}.jsonl if not found.
+    For op2/op3: require prompts_{G}_op{N}.jsonl.
+    """
+    if prompt_option == 1:
+        preferred = os.path.join(prompts_dir, f"prompts_{group}_op1.jsonl")
+        legacy = os.path.join(prompts_dir, f"prompts_{group}.jsonl")
+        if os.path.isfile(preferred):
+            return preferred
+        if os.path.isfile(legacy):
+            return legacy
+        return None
+    else:
+        path = os.path.join(prompts_dir, f"prompts_{group}_op{prompt_option}.jsonl")
+        return path if os.path.isfile(path) else None
+
+
 def main():
     p = argparse.ArgumentParser(description="Step 10: Run LLMs on prompts and store raw outputs per (subset, model).")
     p.add_argument("--prompts-dir", default="results/llm",
-                   help="Directory containing prompts_{A|B|C|D}.jsonl.")
+                   help="Directory containing prompts_{A|B|C|D}_op{1|2|3}.jsonl (or legacy prompts_{G}.jsonl for op1).")
     p.add_argument("--outdir", default="results/llm",
-                   help="Directory to write labels_{group}_{model}.jsonl.")
+                   help="Directory to write labels_{group}[_op{N}]_{model}.jsonl.")
     p.add_argument("--only-groups", nargs="*", default=CANONICAL_GROUPS,
                    help="Which groups to process (default: A B C D).")
     p.add_argument("--models", nargs="+", required=True,
@@ -214,16 +213,19 @@ def main():
                    help="API key (env OPENAI_API_KEY used by default for OpenAI providers).")
     p.add_argument("--sleep", type=float, default=0.0,
                    help="Sleep seconds between calls to be polite with rate limits.")
+    p.add_argument("--prompt_option", type=int, default=1, choices=[1, 2, 3],
+                   help="Which prompt template the prompts files were generated with (1=default).")
     args = p.parse_args()
 
-    log("Step 10 - Run LLMs and store raw outputs")
+    log(f"Step 10 - Run LLMs and store raw outputs (prompt option op{args.prompt_option})")
     os.makedirs(args.outdir, exist_ok=True)
 
-    # Iterate groups
     for group in args.only_groups:
-        prompts_path = os.path.join(args.prompts_dir, f"prompts_{group}.jsonl")
-        if not os.path.isfile(prompts_path):
-            log(f"[Group {group}] ✗ Missing prompts file: {prompts_path}")
+        prompts_path = find_prompts_file(args.prompts_dir, group, args.prompt_option)
+        if not prompts_path:
+            log(f"[Group {group}] ✗ Missing prompts file for op{args.prompt_option}. "
+                f"Looked in: {args.prompts_dir}/prompts_{group}_op{args.prompt_option}.jsonl"
+                + (" and legacy prompts_{group}.jsonl" if args.prompt_option == 1 else ""))
             continue
 
         log(f"\n[Group {group}] Loading prompts: {prompts_path}")
@@ -232,10 +234,15 @@ def main():
             log(f"[Group {group}] ⚠ No prompts in file.")
             continue
 
-        # For each requested model, create its own output stream
         for model in args.models:
             tag = sanitize_model_tag(model)
-            out_path = os.path.join(args.outdir, f"labels_{group}_{tag}.jsonl")
+
+            # Filename policy:
+            # - op1: keep legacy filename (no _op1) for backward compatibility
+            # - op2/op3: append _op{N} to avoid collisions across prompt variants
+            op_suffix = f"_op{args.prompt_option}"
+            out_path = os.path.join(args.outdir, f"labels_{group}{op_suffix}_{tag}.jsonl")
+
             log(f"[Group {group}] → Model: {model} | Output: {out_path}")
 
             written = 0
@@ -249,7 +256,6 @@ def main():
                     top_p = float(decoding.get("top_p", 1.0))
                     max_new_tokens = int(decoding.get("max_new_tokens", 32))
 
-                    # Fire the request
                     ts = int(time.time())
                     try:
                         resp = call_backend(
@@ -270,6 +276,7 @@ def main():
                                 "topic_size": meta.get("topic_size"),
                                 "model": model,
                                 "provider": args.provider,
+                                "prompt_option": args.prompt_option,
                                 "timestamp": ts
                             },
                             "request": {
@@ -283,7 +290,6 @@ def main():
                             }
                         }
                     except Exception as e:
-                        # Store the error verbatim to keep raw logs complete
                         row = {
                             "meta": {
                                 "group": meta.get("group"),
@@ -291,6 +297,7 @@ def main():
                                 "topic_size": meta.get("topic_size"),
                                 "model": model,
                                 "provider": args.provider,
+                                "prompt_option": args.prompt_option,
                                 "timestamp": ts
                             },
                             "request": {

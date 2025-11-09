@@ -1,0 +1,15 @@
+{
+  "group": "A",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "prompt_option": 1,
+  "input_rows": 161,
+  "clean_rows": 161,
+  "reject_rows": 0,
+  "reprompted_once": 0,
+  "in_dir": "results/llm",
+  "out_dir": "results/llm",
+  "labels_input": "results/llm/labels_A_op1_meta-llama_llama-3.1-8b-instruct.jsonl",
+  "prompts_input": "results/llm/prompts_A_op1.jsonl",
+  "clean_output": "results/llm/labels_A_meta-llama_llama-3.1-8b-instruct_op1_clean.jsonl",
+  "rejects_output": "results/llm/labels_A_meta-llama_llama-3.1-8b-instruct_op1_rejects.jsonl"
+}

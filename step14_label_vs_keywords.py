@@ -9,10 +9,10 @@ Inputs (defaults):
   topics dir: results/llm
     - topics_A.jsonl, topics_B.jsonl, topics_C.jsonl, topics_D.jsonl
   labels dir: results/llm
-    - labels_{A|B|C|D}_{model_tag}_clean.jsonl  (from Step 11)
+   - labels_{GROUP}_{MODEL_TAG}_op{N}_clean.jsonl  (from Step 11)
 
 Outputs:
-  results/metrics/kw_sim_{group}_{model_tag}.jsonl
+  results/metrics/kw_sim_{GROUP}_{MODEL_TAG}_op{N}.jsonl
 
 Usage:
   python step14_label_vs_keywords.py \
@@ -21,7 +21,8 @@ Usage:
       --outdir results/metrics \
       --only-groups A B C D \
       --topn 10 \
-      --batch-size 256
+      --batch-size 256 \
+      --prompt_option 1
 """
 
 import argparse
@@ -174,7 +175,8 @@ def process_group(group: str,
                   outdir: str,
                   embedder: "SentenceTransformer",
                   topn: int,
-                  batch_size: int) -> None:
+                  batch_size: int,
+                  prompt_option: int) -> None:
     topics_path = os.path.join(topics_dir, f"topics_{group}.jsonl")
     if not os.path.isfile(topics_path):
         log(f"[Group {group}] ✗ Missing topics file: {topics_path}")
@@ -186,16 +188,16 @@ def process_group(group: str,
         return
 
     # All cleaned label files for this group
-    clean_files = sorted(glob.glob(os.path.join(labels_dir, f"labels_{group}_*_clean.jsonl")))
+    clean_files = sorted(glob.glob(os.path.join(labels_dir, f"labels_{group}_*op{prompt_option}_clean.jsonl")))
     if not clean_files:
-        log(f"[Group {group}] ⚠ No *_clean.jsonl files in {labels_dir}")
+        log(f"[Group {group}] ⚠ No labels_{group}_*_op{prompt_option}_clean.jsonl files in {labels_dir}")
         return
 
     log(f"[Group {group}] topics={len(topics)} | models={len(clean_files)}")
 
     for clean_path in clean_files:
-        tag = os.path.basename(clean_path)[len(f"labels_{group}_"):-len("_clean.jsonl")]
-        out_path = os.path.join(outdir, f"kw_sim_{group}_{tag}.jsonl")
+        tag = os.path.basename(clean_path)[len(f"labels_{group}_"):-len(f"_op{prompt_option}_clean.jsonl")]
+        out_path = os.path.join(outdir, f"kw_sim_{group}_{tag}_op{prompt_option}.jsonl")
 
         rows_in = read_jsonl(clean_path)
         if not rows_in:
@@ -228,7 +230,7 @@ def process_group(group: str,
             if not kws_lower:
                 # no keywords → NaN/0
                 out_rows.append({
-                    "meta": {"group": group, "topic_id": int(tid), "topic_size": int(size_by_tid.get(tid, 0)), "model_tag": tag},
+                    "meta": {"group": group, "topic_id": int(tid), "topic_size": int(size_by_tid.get(tid, 0)), "model_tag": tag, "prompt_option": prompt_option},
                     "label": label,
                     "top_keywords": kws[:topn],
                     "metrics": {"embed_cosine": float("nan"), "jaccard": 0.0, "n_keywords": 0, "used_topn": int(topn)}
@@ -254,7 +256,8 @@ def process_group(group: str,
                     "group": group,
                     "topic_id": int(tid),
                     "topic_size": int(size_by_tid.get(tid, 0)),
-                    "model_tag": tag
+                    "model_tag": tag,
+                    "prompt_option": prompt_option
                 },
                 "label": label,
                 "top_keywords": kws[:topn],
@@ -278,6 +281,7 @@ def main():
     ap.add_argument("--only-groups", nargs="*", default=CANONICAL_GROUPS, help="Groups to process")
     ap.add_argument("--topn", type=int, default=10, help="Top-N keywords to use (default: 10)")
     ap.add_argument("--batch-size", type=int, default=256, help="Embedding batch size")
+    ap.add_argument("--prompt_option", type=int, choices=[1, 2, 3], default=1, help="Which prompt option (op1|op2|op3) to read and emit")
     args = ap.parse_args()
 
     if SentenceTransformer is None:
@@ -296,7 +300,8 @@ def main():
             outdir=args.outdir,
             embedder=embedder,
             topn=args.topn,
-            batch_size=args.batch_size
+            batch_size=args.batch_size,
+            prompt_option = args.prompt_option
         )
 
     log("\nDone.")

@@ -1,40 +1,25 @@
 """
-Step 12 - Cosine similarity between label and topic centroid
+Step 12 - Cosine similarity between label and topic centroid (supports prompt options op1|op2|op3)
 
 For each subset (A/B/C/D):
   1) Load docs and the trained BERTopic model.
-  2) Compute (or recompute) embeddings for all docs using
-     'sentence-transformers/all-MiniLM-L6-v2'.
+  2) Compute (or recompute) embeddings for all docs using 'sentence-transformers/all-MiniLM-L6-v2'.
   3) Build topic centroids by averaging doc embeddings per topic (skip topic -1).
-  4) For each cleaned label (from Step 11 *_clean.jsonl), embed the label text.
+  4) For each cleaned label (from Step 11 *_op{N}_clean.jsonl), embed the label text.
   5) Compute cosine(label, centroid[topic_id]) and write results.
 
 Inputs (defaults):
   - groups_pkl: data/groups_preprocessed.pkl
-      keys can be {A,B,C,D} or {All,Education,Humanities,Medicine}
-      DataFrames must have 'cleaned_text' column
   - model_template: models/bertopic_{group}
-      tries both {A|B|C|D} and actual key (All, ...) and case variants
   - labels_dir: results/llm
-      expects cleaned label files named like:
-        labels_A_<modeltag>_clean.jsonl
-        labels_B_<modeltag>_clean.jsonl
-      (produced by Step 11)
+      expects cleaned label files named like (from Step 11):
+        labels_A_meta-llama_llama-3.1-8b-instruct_op1_clean.jsonl
+        labels_B_meta-llama_llama-3.1-8b-instruct_op2_clean.jsonl
   - outdir: results/metrics
 
 Outputs:
-  - results/metrics/centroid_sim_{group}_{modeltag}.jsonl
-      per topic:
-      {
-        "group": "A",
-        "topic_id": 12,
-        "topic_size": 143,
-        "llm_model": "llama3.1:8b",
-        "label": "quiz submission error",
-        "cosine": 0.6432
-      }
-  - results/metrics/centroid_sim_all.csv
-      concatenated table of all runs
+  - results/metrics/centroid_sim_{group}_{modeltag}_op{N}.jsonl
+  - results/metrics/centroid_sim_op{N}_all.csv
 
 Usage:
   python step12_label_vs_centroid.py \
@@ -43,7 +28,8 @@ Usage:
     --labels-dir results/llm \
     --outdir results/metrics \
     --only-groups A B C D \
-    --batch-size 256
+    --batch-size 256 \
+    --prompt_option 1
 """
 
 import argparse
@@ -59,7 +45,6 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-# embeddings
 from sentence_transformers import SentenceTransformer
 
 try:
@@ -126,7 +111,6 @@ def load_groups(groups_pkl: str):
     present = resolve_available_groups(obj.keys())
     if not present:
         raise KeyError(f"No recognized groups found in {groups_pkl}. Found keys: {list(obj.keys())}")
-    # minimal validation
     for code, actual in present.items():
         df = obj[actual]
         if "cleaned_text" not in df.columns:
@@ -171,17 +155,13 @@ def compute_doc_embeddings(texts: List[str],
         batch_size=batch_size,
         show_progress_bar=True,
         convert_to_numpy=True,
-        normalize_embeddings=False,  # keep raw; cosine() normalizes
+        normalize_embeddings=False,
     )
     return emb.astype(np.float32)
 
 
 def topic_assignments(model: "BERTopic", docs: List[str]) -> pd.DataFrame:
-    """
-    model.get_document_info(docs) => DataFrame with columns: 'Document','Topic','Probability',...
-    """
     info = model.get_document_info(docs).copy()
-    # ensure proper dtypes
     info["Topic"] = info["Topic"].astype(int)
     return info
 
@@ -189,10 +169,6 @@ def topic_assignments(model: "BERTopic", docs: List[str]) -> pd.DataFrame:
 def build_centroids(model: "BERTopic",
                     docs: List[str],
                     doc_emb: np.ndarray) -> Dict[int, np.ndarray]:
-    """
-    Returns: topic_id -> centroid vector (mean of doc embeddings).
-    Skips topic -1 (outliers).
-    """
     info = topic_assignments(model, docs)
     centroids: Dict[int, np.ndarray] = {}
     for tid, grp in info.groupby("Topic"):
@@ -206,37 +182,42 @@ def build_centroids(model: "BERTopic",
     return centroids
 
 
-def collect_clean_label_files(labels_dir: str, group: str) -> List[Tuple[str, str]]:
+def collect_clean_label_files(labels_dir: str, group: str, prompt_option: int) -> List[Tuple[str, str]]:
     """
-    Find all files like: labels_{group}_<modeltag>_clean.jsonl
+    Find all files like: labels_{group}_{modeltag}_op{N}_clean.jsonl
     Returns list of (modeltag, path).
     """
-    pattern = os.path.join(labels_dir, f"labels_{group}_*_clean.jsonl")
+    pattern = os.path.join(labels_dir, f"labels_{group}_*_op{prompt_option}_clean.jsonl")
     paths = sorted(glob.glob(pattern))
-    results = []
+    results: List[Tuple[str, str]] = []
     for p in paths:
-        m = re.search(rf"labels_{group}_(.+?)_clean\.jsonl$", os.path.basename(p))
+        m = re.search(
+            rf"labels_{group}_(.+?)_op{prompt_option}_clean\.jsonl$",
+            os.path.basename(p)
+        )
         if m:
             results.append((m.group(1), p))
     return results
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Step 12: cosine(label, topic-centroid) per topic & LLM.")
+    ap = argparse.ArgumentParser(description="Step 12: cosine(label, topic-centroid) per topic & LLM (with prompt options).")
     ap.add_argument("--groups-pkl", default="data/groups_preprocessed.pkl",
                     help="Pickle with groups: dict[str->DataFrame] with 'cleaned_text'.")
     ap.add_argument("--model-template", default="models/bertopic_{group}",
                     help="Path template to BERTopic model per group (file or dir).")
     ap.add_argument("--labels-dir", default="results/llm",
-                    help="Directory with labels_{group}_{modeltag}_clean.jsonl (from Step 11).")
+                    help="Directory with labels_{group}_{modeltag}_op{N}_clean.jsonl (from Step 11).")
     ap.add_argument("--outdir", default="results/metrics",
-                    help="Directory to write centroid_sim_*.jsonl and centroid_sim_all.csv")
+                    help="Directory to write centroid_sim_*.jsonl and centroid_sim_op{N}_all.csv")
     ap.add_argument("--only-groups", nargs="*", default=CANONICAL_ORDER,
                     help="Which groups to process (default: A B C D).")
     ap.add_argument("--batch-size", type=int, default=256,
                     help="Embedding batch size for SentenceTransformer.")
     ap.add_argument("--sbert", default="sentence-transformers/all-MiniLM-L6-v2",
                     help="SentenceTransformer model id to embed docs & labels.")
+    ap.add_argument("--prompt_option", type=int, choices=[1, 2, 3], default=1,
+                    help="Which prompt option (op1/op2/op3) the cleaned label files correspond to.")
     args = ap.parse_args()
 
     if BERTopic is None:
@@ -244,7 +225,7 @@ def main():
 
     os.makedirs(args.outdir, exist_ok=True)
 
-    log("Step 12 - Cosine similarity(label, topic-centroid)")
+    log(f"Step 12 - Cosine similarity(label, topic-centroid)  (op{args.prompt_option})")
 
     # Load groups
     log(f"• Loading groups: {args.groups_pkl}")
@@ -256,12 +237,10 @@ def main():
 
     all_rows = []
 
-    # Process groups in canonical order if present & requested
     for code in [c for c in CANONICAL_ORDER if c in present and c in args.only_groups]:
         actual_key = present[code]
         log(f"\n[Group {code} | source key: {actual_key}]")
 
-        # Load docs
         df = groups_obj[actual_key].copy()
         df = df[~df["cleaned_text"].isna()]
         df = df[df["cleaned_text"].astype(str).str.strip().str.len() > 0]
@@ -270,37 +249,32 @@ def main():
             continue
         docs: List[str] = df["cleaned_text"].astype(str).tolist()
 
-        # Load model
         try:
             model = try_load_model(args.model_template, group_code=code, actual_key=actual_key)
         except Exception as e:
             log(f"  ✗ Could not load BERTopic model: {e}")
             continue
 
-        # Compute doc embeddings (recompute to be safe/consistent)
         log("  • Computing document embeddings (MiniLM-L6-v2)…")
         doc_emb = compute_doc_embeddings(docs, sbert, batch_size=args.batch_size)
 
-        # Build centroids
         log("  • Building topic centroids…")
         centroids = build_centroids(model, docs, doc_emb)
 
-        # Find all cleaned label files for this group
-        label_files = collect_clean_label_files(args.labels_dir, code)
+        label_files = collect_clean_label_files(args.labels_dir, code, args.prompt_option)
         if not label_files:
-            log(f"  ⚠ No cleaned label files found for group {code} in {args.labels_dir}")
+            log(f"  ⚠ No cleaned label files found for group {code} with op{args.prompt_option} in {args.labels_dir}")
             continue
 
+        topic_info = model.get_topic_info()
+        size_map = {int(r["Topic"]): int(r["Count"]) for _, r in topic_info.iterrows()}
+
         for modeltag, path in label_files:
-            out_path = os.path.join(args.outdir, f"centroid_sim_{code}_{modeltag}.jsonl")
+            out_path = os.path.join(args.outdir, f"centroid_sim_{code}_{modeltag}_op{args.prompt_option}.jsonl")
             log(f"  → Labels: {os.path.basename(path)}  |  Output: {os.path.basename(out_path)}")
 
             rows = read_jsonl(path)
             out_rows = []
-
-            # Map topic sizes from model.get_topic_info for logging
-            topic_info = model.get_topic_info()
-            size_map = {int(r["Topic"]): int(r["Count"]) for _, r in topic_info.iterrows()}
 
             for r in tqdm(rows, desc=f"[{code} | {modeltag}] topics", leave=False):
                 meta = r.get("meta", {})
@@ -311,18 +285,16 @@ def main():
                 if tid is None or tid not in centroids or not label:
                     continue
 
-                # Embed label
                 lab_emb = sbert.encode([label], convert_to_numpy=True, normalize_embeddings=False)[0].astype(np.float32)
-
-                # Cosine
                 sim = cosine(lab_emb, centroids[tid])
 
                 rec = {
                     "group": code,
                     "topic_id": tid,
                     "topic_size": int(size_map.get(tid, 0)),
-                    "llm_model": meta.get("model"),   # original model string from Step 10
+                    "llm_model": meta.get("model"),
                     "llm_provider": meta.get("provider"),
+                    "prompt_option": args.prompt_option,
                     "label": label,
                     "cosine": float(sim),
                 }
@@ -332,13 +304,12 @@ def main():
             write_jsonl(out_path, out_rows)
             log(f"    ✓ Wrote {len(out_rows)} rows → {out_path}")
 
-    # Combined CSV
     if all_rows:
-        csv_path = os.path.join(args.outdir, "centroid_sim_all.csv")
+        csv_path = os.path.join(args.outdir, f"centroid_sim_op{args.prompt_option}_all.csv")
         pd.DataFrame(all_rows).to_csv(csv_path, index=False)
         log(f"\n✓ Combined CSV written → {csv_path}")
     else:
-        log("\n⚠ No rows produced. Check that *_clean.jsonl files exist and topic IDs match your BERTopic models.")
+        log("\n⚠ No rows produced. Ensure *_op{N}_clean.jsonl exist and topic IDs match your BERTopic models.")
 
     log("\nDone.")
     return 0

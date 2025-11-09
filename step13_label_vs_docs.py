@@ -1,8 +1,9 @@
 """
 Step 13 - Compute average cosine similarity between the label and representative documents
+(supports prompt options op1|op2|op3)
 
 For each topic:
-  - Embed the LLM label (from *_clean.jsonl)
+  - Embed the LLM label (from *_op{N}_clean.jsonl)
   - Embed the topic's representative snippets (from topics_{group}.jsonl)
   - Compute cosine similarity(label, each snippet)
   - Record mean / min / max (and count) per topic+model
@@ -11,10 +12,10 @@ Inputs (defaults):
   topics dir: results/llm
     - topics_A.jsonl, topics_B.jsonl, topics_C.jsonl, topics_D.jsonl
   labels dir: results/llm
-    - labels_{A|B|C|D}_{model}_clean.jsonl  (from Step 11)
+    - labels_{GROUP}_{MODEL_TAG}_op{N}_clean.jsonl  (from Step 11)
 
 Outputs:
-  results/metrics/doc_sim_{group}_{model}.jsonl
+  results/metrics/doc_sim_{GROUP}_{MODEL_TAG}_op{N}.jsonl
 
 Usage:
   python step13_label_vs_docs.py \
@@ -22,13 +23,15 @@ Usage:
       --labels-dir results/llm \
       --outdir results/metrics \
       --only-groups A B C D \
-      --batch-size 256
+      --batch-size 256 \
+      --prompt_option 1
 """
 
 import argparse
 import glob
 import json
 import os
+import re
 import sys
 from typing import Dict, Any, List, Tuple
 
@@ -38,7 +41,7 @@ from tqdm import tqdm
 # sentence-transformers
 try:
     from sentence_transformers import SentenceTransformer
-except Exception as e:
+except Exception:
     SentenceTransformer = None
 
 
@@ -89,7 +92,6 @@ def embed_texts(model: "SentenceTransformer",
     if not texts:
         return np.zeros((0, 384), dtype=np.float32)  # MiniLM-L6-v2 has 384 dims
     vecs = model.encode(texts, batch_size=batch_size, show_progress_bar=False, normalize_embeddings=True)
-    # ensure ndarray float32
     vecs = np.asarray(vecs, dtype=np.float32)
     return vecs
 
@@ -105,13 +107,32 @@ def cosine_sim(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     return (b @ a.astype(np.float32))
 
 
+def find_clean_label_files(labels_dir: str, group: str, prompt_option: int) -> List[Tuple[str, str]]:
+    """
+    Return list of (model_tag, path) for:
+      labels_{GROUP}_{MODEL_TAG}_op{N}_clean.jsonl
+    """
+    pattern = os.path.join(labels_dir, f"labels_{group}_*_op{prompt_option}_clean.jsonl")
+    paths = sorted(glob.glob(pattern))
+    out: List[Tuple[str, str]] = []
+    for p in paths:
+        m = re.search(
+            rf"labels_{group}_(.+?)_op{prompt_option}_clean\.jsonl$",
+            os.path.basename(p)
+        )
+        if m:
+            out.append((m.group(1), p))
+    return out
+
+
 def process_group(
     group: str,
     topics_dir: str,
     labels_dir: str,
     outdir: str,
     model: "SentenceTransformer",
-    batch_size: int
+    batch_size: int,
+    prompt_option: int
 ) -> None:
     topics_path = os.path.join(topics_dir, f"topics_{group}.jsonl")
     if not os.path.isfile(topics_path):
@@ -123,27 +144,22 @@ def process_group(
         log(f"[Group {group}] ⚠ No topics in {topics_path}")
         return
 
-    # Find cleaned label files for this group
-    label_files = sorted(glob.glob(os.path.join(labels_dir, f"labels_{group}_*_clean.jsonl")))
+    label_files = find_clean_label_files(labels_dir, group, prompt_option)
     if not label_files:
-        log(f"[Group {group}] ⚠ No cleaned label files found in {labels_dir}")
+        log(f"[Group {group}] ⚠ No cleaned label files (op{prompt_option}) found in {labels_dir}")
         return
 
     log(f"[Group {group}] Topics loaded: {len(topics)}")
-    for clean_path in label_files:
-        # derive sanitized model tag from filename
-        fname = os.path.basename(clean_path)  # labels_A_meta-llama_llama-3.1-8b-instruct_clean.jsonl
-        tag = fname[len(f"labels_{group}_") : -len("_clean.jsonl")]  # meta-llama_llama-3.1-8b-instruct
-        out_path = os.path.join(outdir, f"doc_sim_{group}_{tag}.jsonl")
+    for model_tag, clean_path in label_files:
+        out_path = os.path.join(outdir, f"doc_sim_{group}_{model_tag}_op{prompt_option}.jsonl")
 
         rows_in = read_jsonl(clean_path)
         if not rows_in:
             log(f"[Group {group}] ⚠ Empty cleaned file: {clean_path}")
-            # still create empty output for traceability
             write_jsonl(out_path, [])
             continue
 
-        log(f"[Group {group}] → {tag} | inputs={len(rows_in)} | Output: {out_path}")
+        log(f"[Group {group}] → {model_tag} | inputs={len(rows_in)} | Output: {out_path}")
 
         # Build topic_id -> label text (use cleaned label)
         label_by_tid: Dict[int, str] = {}
@@ -157,11 +173,12 @@ def process_group(
             if not label:
                 continue
             label_by_tid[tid] = label
+            # try to retain topic size from meta; else fallback to topics file
             size_by_tid[tid] = int(meta.get("topic_size") or topics.get(tid, {}).get("size", 0))
 
         # Compute sims per topic
         out_rows: List[Dict[str, Any]] = []
-        for tid, label in tqdm(label_by_tid.items(), desc=f"[{group} | {tag}] topics", leave=False):
+        for tid, label in tqdm(label_by_tid.items(), desc=f"[{group} | {model_tag}] topics", leave=False):
             topic = topics.get(tid)
             if not topic:
                 continue
@@ -169,9 +186,8 @@ def process_group(
             if not snippets:
                 continue
 
-            # embeddings (normalized)
-            label_vec = embed_texts(model, [label], batch_size=batch_size)[0]  # (384,)
-            snip_vecs = embed_texts(model, snippets, batch_size=batch_size)    # (k, 384)
+            label_vec = embed_texts(model, [label], batch_size=batch_size)[0]   # (384,)
+            snip_vecs = embed_texts(model, snippets, batch_size=batch_size)     # (k, 384)
 
             sims = cosine_sim(label_vec, snip_vecs)  # (k,)
             if sims.size == 0:
@@ -182,7 +198,8 @@ def process_group(
                     "group": group,
                     "topic_id": int(tid),
                     "topic_size": int(size_by_tid.get(tid, topic.get("size", 0))),
-                    "model_tag": tag,
+                    "model_tag": model_tag,
+                    "prompt_option": prompt_option,
                 },
                 "label": label,
                 "stats": {
@@ -198,12 +215,13 @@ def process_group(
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Step 13: Cosine similarity between label and representative documents.")
+    ap = argparse.ArgumentParser(description="Step 13: Cosine similarity between label and representative documents (with prompt options).")
     ap.add_argument("--topics-dir", default="results/llm", help="Directory with topics_{group}.jsonl")
-    ap.add_argument("--labels-dir", default="results/llm", help="Directory with labels_{group}_{model}_clean.jsonl")
+    ap.add_argument("--labels-dir", default="results/llm", help="Directory with labels_{group}_{modeltag}_op{N}_clean.jsonl")
     ap.add_argument("--outdir", default="results/metrics", help="Output directory")
     ap.add_argument("--only-groups", nargs="*", default=CANONICAL_GROUPS, help="Groups to process")
     ap.add_argument("--batch-size", type=int, default=256, help="Embedder batch size")
+    ap.add_argument("--prompt_option", type=int, choices=[1, 2, 3], default=1, help="Which prompt option (op1|op2|op3) to read and emit")
     args = ap.parse_args()
 
     if SentenceTransformer is None:
@@ -221,7 +239,8 @@ def main():
             labels_dir=args.labels_dir,
             outdir=args.outdir,
             model=model,
-            batch_size=args.batch_size
+            batch_size=args.batch_size,
+            prompt_option=args.prompt_option
         )
 
     log("\nDone.")

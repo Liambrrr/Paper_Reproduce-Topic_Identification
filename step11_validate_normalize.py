@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """
 Step 11 - Output validation and normalization (Ollama)
 
@@ -5,37 +8,27 @@ For each (subset, model) raw output JSONL from Step 10:
   - Parse response.text into JSON (robust).
   - Validate the schema: {"label": str, "rationale": str}, no extra keys required.
   - If invalid, re-prompt once (same messages/decoding) via Ollama, then re-parse/validate.
-  - Normalize the label minimally:
-      * strip whitespace
-      * lowercase
-      * strip leading/trailing punctuation
-      * enforce <= 4 words (keep first 4 tokens)
-    (Do NOT stem/lemmatize the label.)
-  - Write cleaned rows to labels_{group}_{model}_clean.jsonl.
-  - Write unrecoverable rows to labels_{group}_{model}_rejects.jsonl.
-  - Also write a tiny summary JSON with counts.
+  - Normalize the label minimally (strip, lowercase, strip punctuation edges, <=4 words).
+  - Write cleaned rows and rejects, plus a small summary JSON.
 
-Input files (from Step 10):
-  results/llm/prompts_{A|B|C|D}.jsonl
-  results/llm/labels_{group}_{model}.jsonl
+Inputs (from Step 10), with prompt variant:
+  prompts_{A|B|C|D}_op{1|2|3}.jsonl
+  labels_{group}_{model_tag}_op{1|2|3}.jsonl
+  (Legacy fallback for op1: prompts_{group}.jsonl and labels_{group}_{model_tag}.jsonl)
 
-Output files:
-  results/llm/labels_{group}_{model}_clean.jsonl
-  results/llm/labels_{group}_{model}_rejects.jsonl
-  results/llm/labels_{group}_{model}_summary.json
+Outputs (always include op{N} to disambiguate):
+  labels_{group}_{model_tag}_op{N}_clean.jsonl
+  labels_{group}_{model_tag}_op{N}_rejects.jsonl
+  labels_{group}_{model_tag}_op{N}_summary.json
 
-Usage example:
+Usage:
   python step11_validate_normalize.py \
-  --in-dir results/llm \
-  --out-dir results/llm \
-  --groups A B C D \
-  --models "meta-llama/llama-3.1-8b-instruct" "meta-llama/llama-3.3-70b-instruct" "qwen/qwen2.5-coder-7b-instruct" "qwen/qwen3-vl-30b-a3b-instruct" \
-  --reprompt 0
-
-Notes:
-  - We rely on the 'meta.topic_id' to align a label row to its prompt.
-  - We only reprompt a row once; if still invalid, we drop it (log to rejects).
-  - Backend: Ollama only (http://127.0.0.1:11434 by default).
+    --in-dir results/llm \
+    --out-dir results/llm \
+    --groups A B C D \
+    --models "meta-llama/llama-3.1-8b-instruct" \
+    --prompt_option 1 \
+    --reprompt 0
 """
 
 import argparse
@@ -50,8 +43,7 @@ from tqdm import tqdm
 import requests
 
 CANONICAL_GROUPS = ["A", "B", "C", "D"]
-
-PUNCT_STRIP = "".join(sorted(set(string.punctuation)))  # used for edge-strip
+PUNCT_STRIP = "".join(sorted(set(string.punctuation)))
 
 
 def log(msg: str) -> None:
@@ -80,26 +72,44 @@ def sanitize_model_tag(model: str) -> str:
     return model.replace("/", "_").replace(":", "-").replace(" ", "").lower()
 
 
+def find_prompts_file(in_dir: str, group: str, prompt_option: int) -> Optional[str]:
+    """
+    For op1: prefer prompts_{G}_op1.jsonl; fallback to legacy prompts_{G}.jsonl if not found.
+    For op2/op3: require prompts_{G}_op{N}.jsonl.
+    """
+    if prompt_option == 1:
+        preferred = os.path.join(in_dir, f"prompts_{group}_op1.jsonl")
+        legacy = os.path.join(in_dir, f"prompts_{group}.jsonl")
+        if os.path.isfile(preferred):
+            return preferred
+        if os.path.isfile(legacy):
+            return legacy
+        return None
+    else:
+        path = os.path.join(in_dir, f"prompts_{group}_op{prompt_option}.jsonl")
+        return path if os.path.isfile(path) else None
+
+
+def find_labels_file(in_dir: str, group: str, model_tag: str, prompt_option: int) -> Optional[str]:
+    primary = os.path.join(in_dir, f"labels_{group}_op{prompt_option}_{model_tag}.jsonl")
+    if os.path.isfile(primary):
+        return primary
+    return None
+
+
 def extract_json(text: str) -> Optional[Dict[str, Any]]:
-    """
-    Try to parse the model text into a JSON object.
-    Robust to code fences and extra prose. Returns dict or None.
-    """
     if not isinstance(text, str):
         return None
     s = text.strip()
 
-    # Remove code fences like ```json ... ```
     fence = re.compile(r"```(?:json)?\s*(.*?)```", re.DOTALL | re.IGNORECASE)
     m = fence.search(s)
     if m:
         s = m.group(1).strip()
 
-    # If multiple braces present, slice from first '{' to last '}'.
     if "{" in s and "}" in s:
         s = s[s.find("{"): s.rfind("}") + 1]
 
-    # Try to parse
     try:
         obj = json.loads(s)
         if isinstance(obj, dict):
@@ -122,19 +132,10 @@ def is_valid_schema(obj: Dict[str, Any]) -> bool:
 
 
 def normalize_label(raw_label: str, max_words: int = 4) -> str:
-    """
-    Minimal normalization:
-      - trim whitespace
-      - lowercase
-      - strip leading/trailing punctuation
-      - enforce <= max_words tokens (split on whitespace)
-    """
     if not isinstance(raw_label, str):
         return ""
     s = raw_label.strip().lower()
-    # strip edges punctuation repeatedly
     s = s.strip(PUNCT_STRIP)
-    # collapse inner whitespace
     s = re.sub(r"\s+", " ", s)
     if not s:
         return s
@@ -151,7 +152,6 @@ def call_ollama(api_base: str,
                 top_p: float,
                 max_new_tokens: int,
                 timeout_s: int = 120) -> Optional[str]:
-    """Return raw text (string) or None on hard failure."""
     url = api_base.rstrip("/") + "/api/chat"
     payload = {
         "model": model,
@@ -175,9 +175,6 @@ def call_ollama(api_base: str,
 
 
 def index_prompts_by_topic(prompts: List[Dict[str, Any]]) -> Dict[int, Dict[str, Any]]:
-    """
-    Build a map topic_id -> prompt record for quick lookup during re-prompt.
-    """
     idx = {}
     for rec in prompts:
         meta = rec.get("meta", {})
@@ -193,19 +190,22 @@ def process_pair(group: str,
                  out_dir: str,
                  api_base: str,
                  reprompt: bool,
-                 sleep_s: float) -> Tuple[int, int, int]:
+                 sleep_s: float,
+                 prompt_option: int) -> Tuple[int, int, int]:
     """
     Return: (clean_count, reprompted_count, reject_count)
     """
-    tag = sanitize_model_tag(model)
-    raw_path = os.path.join(in_dir, f"labels_{group}_{tag}.jsonl")
-    prompts_path = os.path.join(in_dir, f"prompts_{group}.jsonl")
+    model_tag = sanitize_model_tag(model)
 
-    if not os.path.isfile(raw_path):
-        log(f"[{group} | {model}] ✗ Missing raw file: {raw_path}")
+    # Locate inputs
+    raw_path = find_labels_file(in_dir, group, model_tag, prompt_option)
+    prompts_path = find_prompts_file(in_dir, group, prompt_option)
+
+    if not raw_path:
+        log(f"[{group} | {model}] ✗ Missing labels file for op{prompt_option} in {in_dir}")
         return (0, 0, 0)
-    if not os.path.isfile(prompts_path):
-        log(f"[{group} | {model}] ✗ Missing prompts file: {prompts_path}")
+    if not prompts_path:
+        log(f"[{group} | {model}] ✗ Missing prompts file for op{prompt_option} in {in_dir}")
         return (0, 0, 0)
 
     raw_rows = read_jsonl(raw_path)
@@ -217,7 +217,7 @@ def process_pair(group: str,
 
     reprompted = 0
 
-    for row in tqdm(raw_rows, desc=f"[{group} | {model}] validate", leave=False):
+    for row in tqdm(raw_rows, desc=f"[{group} | {model}] validate (op{prompt_option})", leave=False):
         meta = row.get("meta", {})
         tid = meta.get("topic_id")
         cleaned = None
@@ -226,18 +226,17 @@ def process_pair(group: str,
             obj = extract_json(text)
             if not obj or not is_valid_schema(obj):
                 return None
-            obj_norm = {
+            return {
                 "label": normalize_label(obj["label"], max_words=4),
                 "rationale": obj["rationale"].strip(),
             }
-            return obj_norm
 
-        # 1) Try the original response
+        # 1) Try original response
         resp = row.get("response", {})
         text = resp.get("text", "") if isinstance(resp, dict) else ""
         cleaned = try_parse_and_normalize(text)
 
-        # 2) If invalid and reprompt is enabled, do one re-prompt
+        # 2) Optional single re-prompt (Ollama)
         if cleaned is None and reprompt:
             pr = prompt_by_tid.get(tid)
             if pr:
@@ -263,7 +262,7 @@ def process_pair(group: str,
             out_row = {
                 "meta": meta,
                 "clean": cleaned,
-                "raw": row.get("response", None) or {"text": text},  # keep original response snapshot
+                "raw": row.get("response", None) or {"text": text},
             }
             clean_rows.append(out_row)
         else:
@@ -273,10 +272,11 @@ def process_pair(group: str,
             import time as _t
             _t.sleep(sleep_s)
 
-    # Write outputs
-    clean_path = os.path.join(out_dir, f"labels_{group}_{tag}_clean.jsonl")
-    reject_path = os.path.join(out_dir, f"labels_{group}_{tag}_rejects.jsonl")
-    summary_path = os.path.join(out_dir, f"labels_{group}_{tag}_summary.json")
+    # Always include op{N} in outputs
+    base = os.path.join(out_dir, f"labels_{group}_{model_tag}_op{prompt_option}")
+    clean_path = f"{base}_clean.jsonl"
+    reject_path = f"{base}_rejects.jsonl"
+    summary_path = f"{base}_summary.json"
 
     write_jsonl(clean_path, clean_rows)
     write_jsonl(reject_path, reject_rows)
@@ -284,32 +284,47 @@ def process_pair(group: str,
     summary = {
         "group": group,
         "model": model,
+        "prompt_option": prompt_option,
         "input_rows": len(raw_rows),
         "clean_rows": len(clean_rows),
         "reject_rows": len(reject_rows),
         "reprompted_once": reprompted,
         "in_dir": in_dir,
-        "out_dir": out_dir
+        "out_dir": out_dir,
+        "labels_input": raw_path,
+        "prompts_input": prompts_path,
+        "clean_output": clean_path,
+        "rejects_output": reject_path,
     }
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
 
-    log(f"[{group} | {model}] ✓ clean={summary['clean_rows']} reject={summary['reject_rows']} reprompted={reprompted}")
+    log(f"[{group} | {model} | op{prompt_option}] ✓ clean={summary['clean_rows']} "
+        f"reject={summary['reject_rows']} reprompted={reprompted}")
     return (summary["clean_rows"], reprompted, summary["reject_rows"])
 
 
 def main():
     ap = argparse.ArgumentParser(description="Step 11: Validate & normalize LLM outputs (Ollama).")
-    ap.add_argument("--in-dir", default="results/llm", help="Directory with labels_{group}_{model}.jsonl and prompts_{group}.jsonl")
-    ap.add_argument("--out-dir", default="results/llm", help="Directory to write *_clean.jsonl, *_rejects.jsonl, *_summary.json")
-    ap.add_argument("--groups", nargs="*", default=CANONICAL_GROUPS, help="Groups to process (default: A B C D)")
-    ap.add_argument("--models", nargs="+", required=True, help="Model identifiers used in Step 10 (same strings you passed to --models)")
-    ap.add_argument("--api-base", default="http://127.0.0.1:11434", help="Ollama API base URL")
-    ap.add_argument("--reprompt", type=int, default=1, help="If 1, re-prompt once on invalid output; if 0, never reprompt")
-    ap.add_argument("--sleep", type=float, default=0.0, help="Sleep seconds between rows")
+    ap.add_argument("--in-dir", default="results/llm",
+                    help="Directory with prompts_* and labels_* JSONL files")
+    ap.add_argument("--out-dir", default="results/llm",
+                    help="Directory to write *_clean.jsonl, *_rejects.jsonl, *_summary.json")
+    ap.add_argument("--groups", nargs="*", default=CANONICAL_GROUPS,
+                    help="Groups to process (default: A B C D)")
+    ap.add_argument("--models", nargs="+", required=True,
+                    help="Model identifiers as used in Step 10 (e.g., meta-llama/llama-3.1-8b-instruct)")
+    ap.add_argument("--api-base", default="http://127.0.0.1:11434",
+                    help="Ollama API base URL (only used if --reprompt 1)")
+    ap.add_argument("--reprompt", type=int, default=1,
+                    help="If 1, re-prompt once on invalid output; if 0, never reprompt")
+    ap.add_argument("--sleep", type=float, default=0.0,
+                    help="Sleep seconds between rows")
+    ap.add_argument("--prompt_option", type=int, default=1, choices=[1, 2, 3],
+                    help="Prompt variant used in Step 10 (affects file names: *_op{N}.jsonl)")
     args = ap.parse_args()
 
-    # Quick connectivity check (only if reprompt enabled)
+    # Connectivity check for reprompt
     if args.reprompt:
         try:
             requests.get(args.api_base.rstrip("/") + "/api/tags", timeout=5).raise_for_status()
@@ -328,13 +343,15 @@ def main():
                 out_dir=args.out_dir,
                 api_base=args.api_base,
                 reprompt=bool(args.reprompt),
-                sleep_s=args.sleep
+                sleep_s=args.sleep,
+                prompt_option=args.prompt_option,
             )
             totals["clean"] += c
             totals["reprompted"] += r
             totals["rejects"] += x
 
-    log(f"\nDone. Totals: clean={totals['clean']} reprompted={totals['reprompted']} rejects={totals['rejects']}")
+    log(f"\nDone (op{args.prompt_option}). Totals: clean={totals['clean']}, "
+        f"reprompted={totals['reprompted']}, rejects={totals['rejects']}")
     return 0
 
 

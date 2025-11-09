@@ -1,0 +1,303 @@
+group,topic_id,topic_size,llm_model,llm_provider,prompt_option,label,cosine
+A,0,3255,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,course issues,0.5258689522743225
+A,1,456,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,runner's body stress,0.4976619780063629
+A,2,42,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,package install,0.4975121319293976
+A,3,39,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,tsboot function,0.5830952525138855
+A,4,22,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,linear spline,0.7096753716468811
+A,5,21,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,piazza access issues,0.7274596691131592
+A,6,19,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,load rrdata,0.8026664853096008
+A,7,19,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,economic policy,0.6475064754486084
+A,8,17,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,hear video,0.5796363949775696
+A,9,17,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,correlation and regression,0.6878433227539062
+A,10,16,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,chapter issues,0.5990813374519348
+A,11,15,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,coffee and cancer,0.5235856771469116
+A,12,14,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,tech support,0.3682723641395569
+A,13,13,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,hypercube dimension,0.6364420652389526
+A,14,12,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,problem solving,0.5906240344047546
+A,15,12,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,choosing function,0.38833388686180115
+A,16,11,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,person years,0.7009735703468323
+A,17,11,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,scpd submission,0.7717933654785156
+A,18,11,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,article access,0.8126844167709351
+A,19,10,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,pvalue interpretation,0.6757097244262695
+A,20,10,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,data analysis software,0.8044906854629517
+A,21,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,expected value,0.514352023601532
+A,22,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,module redundancy,0.691505491733551
+A,23,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,rent control,0.6006609797477722
+A,24,8,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,opportunity cost,0.41487810015678406
+A,25,8,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,download module,0.7384043335914612
+A,26,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,tree split values,0.7296661138534546
+A,27,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,browser issues,0.6691213250160217
+A,28,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,case control sampling,0.6799071431159973
+A,29,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,exercises and answers,0.7748069167137146
+A,30,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,ordinal data,0.7223679423332214
+A,31,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,covariance matrix,0.760231077671051
+A,32,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,meningitis treatment,0.5465366244316101
+A,33,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,sugar and tea,0.5990702509880066
+A,34,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,verb means discussion,0.7201697826385498
+A,35,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,binomial approximation,0.6812356114387512
+A,36,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,oob test error,0.6077979207038879
+A,37,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,active voice,0.171567901968956
+A,38,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,autism disorders,0.6963189840316772
+A,39,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,survival probability,0.7025203108787537
+A,40,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,oil price impact,0.7312349081039429
+A,41,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,access issue,0.8621542453765869
+A,42,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,confidence interval,0.5963100790977478
+A,43,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,toluene exposure and parkinsons,0.42146432399749756
+A,44,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,slope and intercept,0.8164973258972168
+A,45,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,reaction times,0.6295778751373291
+A,46,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,random forests,0.5969269871711731
+A,47,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,matrix syntax,0.7280778884887695
+A,48,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,electron trajectories,0.6578999757766724
+A,49,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,spinal cord injuries,0.7928366661071777
+A,50,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,firms enter exit,0.568551242351532
+A,51,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,homework help,0.5888453125953674
+A,52,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,email address,0.7294586300849915
+A,53,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,accreditation issues,0.19288575649261475
+A,54,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,logarithms,0.702542245388031
+A,55,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,quick summary,0.5068556070327759
+A,56,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,problem solved,0.668978214263916
+A,57,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,frequency data,0.7076104879379272
+A,58,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,multiple births,0.6411371231079102
+A,59,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,ipad issues,0.7712331414222717
+A,60,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,confounding variables,0.4427104890346527
+A,61,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,nonlinear regression,0.49994421005249023
+A,62,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,antiinflammatory drugs,0.7006644010543823
+A,63,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,donor calculation,0.7619113326072693
+A,64,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,model predictors,0.5534480214118958
+A,65,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,computer said wrong,0.6354777216911316
+A,66,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,triangle graphs,0.6076638698577881
+A,67,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,mooc forum issues,0.2053939253091812
+A,68,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,table and figures,0.6150320768356323
+A,69,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,unit homework values,0.6279671788215637
+A,70,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,editing exercises,0.6294178366661072
+A,71,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,height distribution,0.5384305119514465
+A,72,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,download page,0.8842809200286865
+A,73,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,principal components,0.5251438021659851
+A,74,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,fitted going,0.6787158846855164
+A,75,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,islr discount,0.5016518831253052
+A,76,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,degrees of freedom,0.6028096079826355
+A,77,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,typos and meaning,0.6612189412117004
+A,78,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,seizure treatment,0.6475948691368103
+A,79,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,utility numbers,0.8038004040718079
+A,80,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,rubric button,0.8040691018104553
+A,81,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,unsatisfied previous,0.3072280287742615
+A,82,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,opportunity cost,0.4057522416114807
+A,83,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,map data,0.47095853090286255
+A,84,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,rolling dice,0.7836018204689026
+A,85,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,sign confusion,0.6291224360466003
+A,86,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,lasso model,0.6362563967704773
+A,87,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,bin graph choice,0.4800916314125061
+A,88,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,unsatisfied with work,0.30120396614074707
+A,89,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,scientific writing,0.5880935192108154
+A,90,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,phd thesis,0.6180605888366699
+A,91,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,fruit utility,0.48873215913772583
+A,92,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,capital letters,0.7030626535415649
+A,93,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,binary variables,0.6794530153274536
+A,94,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,value updated,0.6797878742218018
+A,95,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,common sense,0.7279626727104187
+A,96,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,standard deviation,0.5070074200630188
+A,97,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,howcome answer,0.6978205442428589
+A,98,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,percentages and decimals,0.6706893444061279
+A,99,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,signrank test,0.4937936067581177
+A,100,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,spinal cord injuries,0.5455305576324463
+A,101,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,alzheimer's drugs,0.6202738881111145
+A,102,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,vaccine simulation,0.8493078351020813
+A,103,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,ensures participation,0.5697041749954224
+A,104,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,shift movement,0.5068578124046326
+A,105,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,speed help,0.6435620784759521
+A,106,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,copy paste glitch,0.6028439998626709
+A,107,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,disappointing sections,0.7980812788009644
+A,108,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,lessons disappeared,0.7319416999816895
+A,109,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,module section,0.5132604241371155
+A,110,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,model variance,0.5899403691291809
+A,111,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,salary age fit,0.24982145428657532
+A,112,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,toy data set,0.543122410774231
+A,113,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,budget clarification,0.5585064888000488
+A,114,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,beta beta,0.3218212127685547
+A,115,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,adhd symptoms,0.2669898569583893
+A,116,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,linear model,0.4725160598754883
+A,117,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,sum squared betas,0.7275973558425903
+A,118,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,slow internet,0.28293243050575256
+A,119,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,twodimensional picture,0.494651734828949
+A,120,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,key making critical,0.12454549223184586
+A,121,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,margin tolerance,0.3981877267360687
+A,122,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,economic models,0.3004136085510254
+A,123,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,percent change,0.518817663192749
+A,124,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,estimator tstat,0.5729156136512756
+A,125,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,crossvalidation,0.8249853253364563
+A,126,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,basis functions,0.802418053150177
+A,127,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,power negative,0.4256473481655121
+A,128,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,hyphenated words,0.4639311730861664
+A,129,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,irreducible variance,0.5071200728416443
+A,130,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,demo editing,0.3920900225639343
+A,131,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,compute pcs elements,0.49218448996543884
+A,132,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,mse residuals,0.5924010276794434
+A,133,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,rearranging equations,0.38383224606513977
+A,134,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,blank pages,0.5383241176605225
+A,135,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,variable correctness,0.6349636912345886
+A,136,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,sentence revision,0.4895264208316803
+A,137,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,enunciation requirement,0.5820242166519165
+A,138,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,price elasticity,0.4998525381088257
+A,139,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,line breaks,0.34478411078453064
+A,140,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,bagging overfitting,0.48716863989830017
+A,141,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,growth mindset,0.8529370427131653
+A,142,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,bias variance tradeoff,0.5303357839584351
+A,143,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,simplify distance calculations,0.5249178409576416
+A,144,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,directory error,0.5628348588943481
+A,145,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,indexing issues,0.18238015472888947
+A,146,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,categorical variables,0.5875409245491028
+A,147,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,logistic regression,0.49421077966690063
+A,148,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,issue fixed,0.7810570001602173
+A,149,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,mean squared error,0.7093494534492493
+A,150,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,statistical significance,0.4638880491256714
+A,151,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,prescriptive norms,0.23136675357818604
+A,152,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,max number tries,0.6671143174171448
+A,153,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,predictor importance,0.4365689158439636
+A,154,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,time management,0.4884227216243744
+A,155,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,office hours,0.6253195405006409
+A,156,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,binary variables,0.3735837936401367
+A,157,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,calculus help,0.3905930519104004
+A,158,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,loading error,0.43195968866348267
+A,159,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,beta equation,0.7484497427940369
+A,160,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,confused reference,0.3304934501647949
+B,0,101,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,peer review,0.40243348479270935
+B,1,93,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,math education,0.5424450635910034
+B,2,30,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,video response,0.6211626529693604
+B,3,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,dialog box issues,0.5322104096412659
+B,4,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,saved responses,0.6109349131584167
+B,5,8,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,reviewing responses,0.7125465869903564
+B,6,8,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,get course credit,0.6409829258918762
+B,7,8,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,progress issue,0.7304941415786743
+B,8,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,survey issues,0.6697463989257812
+B,9,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,video captions,0.6594462990760803
+B,10,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,painting problem,0.49762240052223206
+B,11,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,firefox issue,0.5856143236160278
+B,12,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,survey questions,0.839025616645813
+B,13,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,receive certificate,0.8386057615280151
+B,14,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,edit peer grading,0.5766863226890564
+B,15,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,getting certificate,0.724177360534668
+B,16,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,svg support,0.368754506111145
+B,17,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,wrong submissions,0.7776966094970703
+B,18,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,feedback agreed,0.33951976895332336
+B,19,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,session issues,0.6116563081741333
+B,20,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,commenting process,0.48785898089408875
+B,21,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,completed session,0.700107753276825
+B,22,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,discourages discussion,0.519201934337616
+B,23,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,video scrolling,0.5136902928352356
+B,24,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,course resources,0.7008849382400513
+C,0,1308,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,mooc course discussion,0.276658833026886
+C,1,429,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,cold stress,0.5986732244491577
+C,2,12,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,dimensionality question,0.48969587683677673
+C,3,10,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,audio volume problem,0.6669407486915588
+C,4,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,link resources,0.7868702411651611
+C,5,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,deadline issues,0.7430136203765869
+C,6,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,article access,0.8627157211303711
+C,7,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,logit scale,0.6996960639953613
+C,8,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,formula editor,0.5200212597846985
+C,9,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,basis functions,0.7496830224990845
+C,10,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,reaction speed,0.6957210302352905
+C,11,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,business profits,0.6854182481765747
+C,12,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,thought intercept,0.6819151043891907
+C,13,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,office hours,0.9153370261192322
+C,14,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,submit code,0.4028450846672058
+C,15,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,change working directory,0.9765520691871643
+C,16,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,blank pages,0.6345140933990479
+C,17,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,complexity quantified,0.3747745454311371
+C,18,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,cbind correct,0.4312237799167633
+C,19,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,margin and tolerance,0.4496973752975464
+C,20,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,technical glitch,0.5118451714515686
+C,21,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,man managing women,0.399752140045166
+D,0,1893,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,essay discussion,0.3937910795211792
+D,1,24,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,medical emergency,0.5509671568870544
+D,2,20,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,tech support issue,0.512612521648407
+D,3,15,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,install deducer,0.5651081800460815
+D,4,12,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,download slides,0.8646488785743713
+D,5,11,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,histograms in mooc,0.551108181476593
+D,6,10,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,respiratory issues,0.4125904142856598
+D,7,10,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,brain spinal cord,0.6108174920082092
+D,8,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,person year follow,0.7796863317489624
+D,9,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,statement accomplishment,0.7911099195480347
+D,10,9,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,parkinsons disease,0.2398684173822403
+D,11,8,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,submitting previous work,0.5761091113090515
+D,12,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,mooc completion,0.22606025636196136
+D,13,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,normal approximation,0.621310293674469
+D,14,7,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,ordinal scale,0.6633076071739197
+D,15,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,multiple births,0.6128063201904297
+D,16,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,slope and line,0.7449820637702942
+D,17,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,getting received help,0.5236769318580627
+D,18,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,donor blood,0.5570980310440063
+D,19,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,paste assignment,0.2830711901187897
+D,20,6,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,electron trajectories,0.6578999757766724
+D,21,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,rolling dice,0.7767314910888672
+D,22,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,demo edit exercises,0.7641903758049011
+D,23,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,webmail issues,0.4680914282798767
+D,24,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,beta smoking,0.33598101139068604
+D,25,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,correlation question,0.4864818751811981
+D,26,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,pvalue adjustment,0.6909840703010559
+D,27,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,recommended halt study,0.8829867839813232
+D,28,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,antiinflammatory drugs prevent,0.784907877445221
+D,29,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,read multiplier value,0.5363267660140991
+D,30,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,null hypothesis,0.42465946078300476
+D,31,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,cardiorespiratory performance,0.6778881549835205
+D,32,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,choosing function,0.3721822500228882
+D,33,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,frequency study,0.688069224357605
+D,34,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,survival probability,0.6701046824455261
+D,35,5,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,post search,0.5277592539787292
+D,36,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,vaccine simulation,0.8004531264305115
+D,37,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,mock class download,0.656252920627594
+D,38,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,module repetition,0.7657618522644043
+D,39,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,fishers exact test,0.6583958864212036
+D,40,4,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,coin flip probability,0.5955129861831665
+D,41,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,downloading issues,0.5068055987358093
+D,42,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,perfect tense,0.2810927927494049
+D,43,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,submit arrows issue,0.46899330615997314
+D,44,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,common sense,0.7279626727104187
+D,45,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,absolute distance method,0.5434098243713379
+D,46,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,professional writing,0.5116032361984253
+D,47,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,help requests,0.5058121681213379
+D,48,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,prosthetic energy efficiency,0.531076967716217
+D,49,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,raised nevi,0.4234989583492279
+D,50,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,beta coefficient,0.5098789930343628
+D,51,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,signrank test,0.5513793230056763
+D,52,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,wrong data analysis,0.5723957419395447
+D,53,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,cheating question,0.49548715353012085
+D,54,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,card combinations,0.6601486802101135
+D,55,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,ratios and units,0.5919777750968933
+D,56,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,act matter occurs,0.21875399351119995
+D,57,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,exact test,0.4499029815196991
+D,58,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,browser issues,0.4812062382698059
+D,59,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,missing data plots,0.6591914296150208
+D,60,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,percentages use,0.6473117470741272
+D,61,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,howcome answer,0.6978205442428589
+D,62,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,got zeros peers,0.6092421412467957
+D,63,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,number question,0.4143969714641571
+D,64,3,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,prevalence fractures,0.3717132806777954
+D,65,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,sensitivity specificity,0.3822280168533325
+D,66,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,alzheimers disease,0.5931581258773804
+D,67,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,assignment wait bug,0.6796810030937195
+D,68,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,standard normal chart,0.7349894046783447
+D,69,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,journal ethics,0.49361521005630493
+D,70,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,z-score calculation,0.3077003061771393
+D,71,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,health and climates,0.4383827745914459
+D,72,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,childhood conduct,0.491413950920105
+D,73,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,got zeroes really,0.7065818905830383
+D,74,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,posted mistake solutions,0.6427181959152222
+D,75,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,treat injuries,0.4067877531051636
+D,76,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,statement accomplishment,0.6379656791687012
+D,77,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,outlier detection,0.47128885984420776
+D,78,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,skew results,0.437137633562088
+D,79,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,download module,0.8279401659965515
+D,80,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,text editing,0.5192035436630249
+D,81,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,update textbook reference,0.6780176758766174
+D,82,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,uninstall rescuetime,0.6275768876075745
+D,83,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,pab independence,0.6613045334815979
+D,84,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,odds ratios,0.4201713502407074
+D,85,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,lecture hints,0.6011138558387756
+D,86,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,submit answers,0.5127801299095154
+D,87,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,statistical inference,0.3963695168495178
+D,88,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,linear regression assumption,0.5904242396354675
+D,89,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,week deadline,0.5958401560783386
+D,90,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,rsquare analysis,0.5430503487586975
+D,91,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,web page access,0.3340928852558136
+D,92,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,blood sugar,0.25031036138534546
+D,93,2,meta-llama/llama-3.1-8b-instruct,openai-compatible,3,discordant pairs,0.31689006090164185
