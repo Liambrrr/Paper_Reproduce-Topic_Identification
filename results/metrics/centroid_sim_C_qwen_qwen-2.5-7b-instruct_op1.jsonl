@@ -1,0 +1,22 @@
+{"group": "C", "topic_id": 0, "topic_size": 1308, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "subset selection", "cosine": 0.14066363871097565}
+{"group": "C", "topic_id": 1, "topic_size": 429, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "cold body effects", "cosine": 0.6586441397666931}
+{"group": "C", "topic_id": 2, "topic_size": 12, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "hypercube dimensions", "cosine": 0.6521996259689331}
+{"group": "C", "topic_id": 3, "topic_size": 10, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "audio issues", "cosine": 0.6543350219726562}
+{"group": "C", "topic_id": 4, "topic_size": 7, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "link sharing", "cosine": 0.538935124874115}
+{"group": "C", "topic_id": 5, "topic_size": 6, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "deadline urgency", "cosine": 0.6505786776542664}
+{"group": "C", "topic_id": 6, "topic_size": 5, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "article access", "cosine": 0.8627157211303711}
+{"group": "C", "topic_id": 7, "topic_size": 4, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "logit scale", "cosine": 0.6996960639953613}
+{"group": "C", "topic_id": 8, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "scaling formulas", "cosine": 0.5114434361457825}
+{"group": "C", "topic_id": 9, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "basis functions", "cosine": 0.7496830224990845}
+{"group": "C", "topic_id": 10, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "reaction speed", "cosine": 0.6957210302352905}
+{"group": "C", "topic_id": 11, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "business profits", "cosine": 0.6854182481765747}
+{"group": "C", "topic_id": 12, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "intercept concepts", "cosine": 0.6100623607635498}
+{"group": "C", "topic_id": 13, "topic_size": 3, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "office hours", "cosine": 0.9153370261192322}
+{"group": "C", "topic_id": 14, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "code and figures", "cosine": 0.46414467692375183}
+{"group": "C", "topic_id": 15, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "change directory", "cosine": 0.885725200176239}
+{"group": "C", "topic_id": 16, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "print issues", "cosine": 0.5520957112312317}
+{"group": "C", "topic_id": 17, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "complexity gaps", "cosine": 0.40746408700942993}
+{"group": "C", "topic_id": 18, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "correct coding issues", "cosine": 0.2345997393131256}
+{"group": "C", "topic_id": 19, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "support vector machine", "cosine": 0.3141203820705414}
+{"group": "C", "topic_id": 20, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "technical glitch", "cosine": 0.5118451714515686}
+{"group": "C", "topic_id": 21, "topic_size": 2, "llm_model": "qwen/qwen-2.5-7b-instruct", "llm_provider": "openai-compatible", "prompt_option": 1, "label": "gender diversity", "cosine": 0.44389060139656067}

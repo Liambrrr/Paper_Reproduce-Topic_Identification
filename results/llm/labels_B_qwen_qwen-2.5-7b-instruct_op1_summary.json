@@ -1,0 +1,15 @@
+{
+  "group": "B",
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "prompt_option": 1,
+  "input_rows": 25,
+  "clean_rows": 25,
+  "reject_rows": 0,
+  "reprompted_once": 0,
+  "in_dir": "results/llm",
+  "out_dir": "results/llm",
+  "labels_input": "results/llm/labels_B_op1_qwen_qwen-2.5-7b-instruct.jsonl",
+  "prompts_input": "results/llm/prompts_B_op1.jsonl",
+  "clean_output": "results/llm/labels_B_qwen_qwen-2.5-7b-instruct_op1_clean.jsonl",
+  "rejects_output": "results/llm/labels_B_qwen_qwen-2.5-7b-instruct_op1_rejects.jsonl"
+}
