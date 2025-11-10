@@ -46,13 +46,13 @@ Temporary results are at results/metrics/summary_step15.md.
   "usage": {"prompt_tokens": 328, "completion_tokens": 31, "total_tokens": 359}
 }
 ```
-## Questions and Clarifications
+### Questions and Clarifications
 
-### 1. Model Access
+#### 1. Model Access
 Where can llama-3.1-8b, llama-3.3-70b-instruct, qwen/qwen2.5-7b, qwen/qwen3-30b models be accessed via cloud or lightweight endpoints (without local download)?
 Pulling these models locally consumes too much storage and memory on my laptop.
 
-### 2. Prompt Variations
+#### 2. Prompt Variations
 Haven't tried variations of prompts. How many variations should be sufficient?
 Current prompt template:
 - system prompt:
@@ -73,7 +73,7 @@ Current prompt template:
     that best describes this topic.
     Return JSON ONLY in the form: {"label": "<≤4 words>", "rationale": "<short reason>"}
 
-### 3. Validation Criteria
+#### 3. Validation Criteria
 •	For responses rejected due to "finish_reason": "length",
 → Should they be considered valid if the partial JSON structure is correct up to the cutoff?
 •	When re-prompting invalid cases,
@@ -136,7 +136,7 @@ Had problem with not finished rationale, so rationale is limited to at most 10 w
 
 ##### Variation 1 - Original
 System prompt:
-```json
+```text
 You label topics for MOOC forum posts. 
 Return a STRICT JSON object with exactly the keys 'label' and 'rationale'. 
 Constraints:
@@ -146,7 +146,7 @@ Constraints:
 - Respond with ONLY the JSON object. No extra text before or after.
 ```
 User Prompt:
-```json
+```text
 Subset: {group} (urgent MOOC forum posts)
 Topic ID: {topic_id} | Topic Size: {topic_size}
 Top keywords (ordered):
@@ -162,7 +162,7 @@ Return JSON ONLY in the form: {"label": "<≤4 words>", "rationale": "<≤10 wor
 
 ##### Variation 2 - minimal
 System prompt:
-```json
+```text
 You label topics for MOOC forum posts.
 Return ONLY this strict JSON object:
 {"label": "<≤4 words>", "rationale": "<≤10 words>"}.
@@ -172,7 +172,7 @@ Rules:
 No extra text before/after the JSON.
 ```
 User Prompt:
-```json
+```text
 Corpus: MOOC forum posts, subset {group}
 Topic ID: {topic_id} | Topic size: {topic_size}
 Keywords (ordered):
@@ -187,7 +187,7 @@ Output JSON ONLY: {"label": "<≤4 words>", "rationale": "<≤10 words>"}
 
 ##### Variation 3 - paraphrase of original
 System prompt:
-```json
+```text
 You are labeling topics for a MOOC forum corpus.
 Output must be ONLY this JSON: {"label": "<≤4 words>", "rationale": "<≤10 words>"}.
 Constraints:
@@ -196,7 +196,7 @@ Constraints:
 No additional commentary.
 ```
 User Prompt:
-```json
+```text
 I have a corpus of MOOC forum posts with many topics.
 This topic is described by the following keywords:
 [ {keyword_1}, {keyword_2}, ..., {keyword_n} ]
