@@ -1,2 +1,0 @@
-{"group": "C", "topic_id": 6, "topic_size": 5, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "article access issues", "cosine": 0.7658028602600098}
-{"group": "C", "topic_id": 16, "topic_size": 2, "llm_model": "meta-llama/llama-3.1-8b-instruct", "llm_provider": "openai-compatible", "label": "blank pages issue", "cosine": 0.660990834236145}

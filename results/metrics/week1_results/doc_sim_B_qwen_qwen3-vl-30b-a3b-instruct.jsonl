@@ -1,3 +1,0 @@
-{"meta": {"group": "B", "topic_id": 16, "topic_size": 3, "model_tag": "qwen_qwen3-vl-30b-a3b-instruct"}, "label": "svg image support", "stats": {"n_snippets": 3, "mean": 0.2733284533023834, "min": 0.0570315383374691, "max": 0.678498387336731}}
-{"meta": {"group": "B", "topic_id": 19, "topic_size": 3, "model_tag": "qwen_qwen3-vl-30b-a3b-instruct"}, "label": "tech issues posting", "stats": {"n_snippets": 3, "mean": 0.40129050612449646, "min": 0.35472407937049866, "max": 0.4474951922893524}}
-{"meta": {"group": "B", "topic_id": 23, "topic_size": 2, "model_tag": "qwen_qwen3-vl-30b-a3b-instruct"}, "label": "video background issues", "stats": {"n_snippets": 2, "mean": 0.34303945302963257, "min": 0.29800671339035034, "max": 0.3880721926689148}}

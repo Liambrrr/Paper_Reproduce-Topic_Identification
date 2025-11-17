@@ -1,19 +1,75 @@
-# Weekly Progress Report
-
-**Date:** Nov 3, 2025
-**Project:** Paper_Reproduce-Topic_Identification  
-**Author:** Liam Tang  
-
----
+# MOOC Forum Topic Analysis -- LLM Part
 
 ## Overview
 
 Implementation of the instruction Steps **10–17** corresponds to Python files **step8–step15** in the current workflow.  
 Steps **1–7** were adapted from [XqFeng-Josie/AI_Education_Paper_Replicate](https://github.com/XqFeng-Josie/AI_Education_Paper_Replicate/tree/main/MOOC_Forum_Topic).
 
----
-## Progress Summary Week 2
-current results:
+## Quick Start
+
+### 1. Environment Setup
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+```
+
+### 2. Run Pipeline
+
+```bash
+python step1_preprocess_data.py
+python step2_text_preprocessing.py
+python step3_generate_embeddings.py
+python step4_train_bertopic.py 
+python step4_visualize_grid_search.py
+python step6_traditional_models.py
+python step7_paper_comparison.py
+python step8_export_per_topic_artifacts.py
+python step9_build_llm_prompts.py
+python step10_rum_llms.py
+python step11_validate_normalize.py
+python step12_label_vs_centroid.py
+python step13_label_vs_docs.py
+python step14_label_vs_keywords.py
+python step15_aggregate_report.py
+
+# Step 6 with specific models
+python step6_traditional_models.py "LDA,LSI"
+```
+## Step Instruction
+Step 11 - Prompt and decoding settings (constant across models)
+Use a single instruction prompt that (a) shows the subset label (A/B/C/D), (b) lists the ordered top-10 keywords, (c) includes the representative snippets, and (d) requests one concise human-readable label with ≤4 words. Require strict JSON output (e.g., {"label": "...", "rationale": "..."}), and run deterministically (temperature=0, top_p=1, max_new_tokens≈32). 
+Your prompt can be similar to this (please change the word “Biology” to our context), but you can try several variations by paraphrasing to get better results. (Prompt is cited by: Kozlowski, D., Pradier, C., & Benz, P. (2024). Generative AI for automatic topic labelling. arXiv preprint arXiv:2408.07003.)
+
+Step 12 - Run LLMs for multiple times and store raw outputs
+Use Llama 3.1-8B, Llama 3.3-70B-Instruct, Qwen2.5-7B, Qwen3-30B models. For every topic in each subset, call each model once (then we can run them 3 times) and store outputs to separate files (e.g., labels_A_llama_70B.jsonl, labels_A_Qwen_30B.jsonl, …). 
+Keep model outputs separate for evaluation.
+
+Step 13 - Output validation and normalization
+Parse JSON; drop responses that violate the schema, re-prompt once if needed. 
+Normalize labels minimally (trim spaces, lowercase, strip leading/trailing punctuation) while preserving wording (do not stem/lemmatize the label itself). 
+Enforce the ≤4-word constraint; if violated, keep the first four tokens.
+
+Step 14 - Compute cosine similarity between the label and the topic centroid
+For each topic, compute a topic centroid embedding by averaging the document embeddings of that topic (use the same sentence-embedding model already adopted in the study for consistency which is all-MiniLM-L6-v2). 
+Compute the label’s text embedding. 
+Record cosine similarity(label, topic-centroid) per topic and per LLM.
+
+Step 15 - Compute average cosine similarity between the label and representative documents
+For each topic, embed the representative snippets selected in Step 10. 
+Compute cosine similarity between the label embedding and each snippet embedding, then take the mean (also retain min/max). 
+Record per topic and per LLM.
+
+Step 16 - Compare the label with top-N keywords
+For each topic, (a) compute an embedding-based comparison by averaging the embeddings of the top-10 keywords into a single vector, then compute cosine similarity(label, mean(top-word embeddings))
+(b) compute a token-overlap comparison via Jaccard similarity between the set of lowercased/lemmatized label tokens and the set of top-10 keywords. 
+Record both per topic and per LLM.
+
+Step 17 - Aggregate and summarize per model (reported separately for A,B,C,D)
+For each LLM and subset, report distribution summaries across topics for the three comparisons above (cosine with centroid; mean cosine with representative documents; cosine with mean(top-word embeddings) and Jaccard with top-words): mean, standard deviation, median, interquartile range, minimum, maximum.
+
+## Experiment Results
 
 ### Group A
 
@@ -59,158 +115,7 @@ current results:
 
 > Format: mean ± std | median [IQR] | min–max (n)
 
-### Problems from last week
-
-#### 1. Model Updates
-The AWS API also does not support non-instruct version of llama-3.1-7b, qwen-2.5-8b and qwen-3-30b, so no change was made on the way of calling cloud models.
-
-#### 2. Validation and Normalization
-Had problem with not finished rationale, so rationale is limited to at most 10 words. Also variations of prompts were attempted.
-
-##### Variation 1 - Original
-System prompt:
-```text
-You label topics for MOOC forum posts. 
-Return a STRICT JSON object with exactly the keys 'label' and 'rationale'. 
-Constraints:
-- 'label' must be a concise, human-readable topic name of at most 4 words.
-- Do not include quotes, numbering, brackets, or punctuation in the label.
-- 'rationale' is a short sentence explaining why the label fits (≤ 10 words).
-- Respond with ONLY the JSON object. No extra text before or after.
-```
-User Prompt:
-```text
-Subset: {group} (urgent MOOC forum posts)
-Topic ID: {topic_id} | Topic Size: {topic_size}
-Top keywords (ordered):
- - {keyword_1}, {keyword_2}, ..., {keyword_n}
-Representative snippets (truncated):
- [1] {snippet_1}
- [2] {snippet_2}
- ...
-Task: Based on the keywords and snippets, provide a concise human-readable label (<=4 words) that best describes this topic.
-If multiple plausible labels exist, choose the most general, course-agnostic phrasing.
-Return JSON ONLY in the form: {"label": "<≤4 words>", "rationale": "<≤10 words>"}
-```
-
-##### Variation 2 - minimal
-System prompt:
-```text
-You label topics for MOOC forum posts.
-Return ONLY this strict JSON object:
-{"label": "<≤4 words>", "rationale": "<≤10 words>"}.
-Rules:
-- "label": concise, human-readable, ≤4 words, no quotes/brackets/punctuation.
-- "rationale": ≤10 words, short reason for fit.
-No extra text before/after the JSON.
-```
-User Prompt:
-```text
-Corpus: MOOC forum posts, subset {group}
-Topic ID: {topic_id} | Topic size: {topic_size}
-Keywords (ordered):
-[ {keyword_1}, {keyword_2}, ..., {keyword_n} ]
-Representative snippets (truncated):
-[1] {snippet_1}
-[2] {snippet_2}
- ...
-Task: Extract a short topic name (≤4 words) and a ≤10-word rationale.
-Output JSON ONLY: {"label": "<≤4 words>", "rationale": "<≤10 words>"}
-```
-
-##### Variation 3 - paraphrase of original
-System prompt:
-```text
-You are labeling topics for a MOOC forum corpus.
-Output must be ONLY this JSON: {"label": "<≤4 words>", "rationale": "<≤10 words>"}.
-Constraints:
-- label: ≤4 words, general, course-agnostic, no punctuation/quotes/brackets.
-- rationale: ≤10 words, briefly why the label fits.
-No additional commentary.
-```
-User Prompt:
-```text
-I have a corpus of MOOC forum posts with many topics.
-This topic is described by the following keywords:
-[ {keyword_1}, {keyword_2}, ..., {keyword_n} ]
-Consider these representative snippets (truncated):
-[1] {snippet_1}
-[2] {snippet_2}
- ...
-Based on the information above, produce a short topic label (one to four words)
-that best represents the topic, and a ≤10-word rationale.
-Format: {"label": "<≤4 words>", "rationale": "<≤10 words>"}
-
-[Context] Subset: {group} | Topic ID: {topic_id} | Topic Size: {topic_size}
-```
-
-### Current Problems/ Things to be guided
-
-llama-3.3-70b-instruct only outperforms 3.1-8b-instruct for group A(general topics), but the difference in performance is tiny. Based on the report table it seems that llama-3.3-70b-instruct performs better with larger input size.
-
 ---
-## Progress Summary Week 1
-
-### 1. Model Updates
-Since some of the original models are unavailable or too large to host locally, the following **OpenRouter-accessible models** were used:
-
-- `meta-llama/llama-3.1-8b-instruct`
-- `qwen/qwen2.5-7b-instruct`   
-- `qwen/qwen3-vl-30b-a3b-instruct`
-Temporary results are at results/metrics/summary_step15.md.
----
-
-### 2. Step 11 – Validation and Normalization
-
-- Out of ~1,200 total samples, most are rejected.  
-- **Re-prompting was disabled** (`--reprompt 0`).  
-- The primary cause of rejection was **incomplete JSON outputs** — models often produced truncated rationales due to token limits.
-
-#### Example (Rejected)
-```json
-"response": {
-  "text": "{\n  \"label\": \"MOOC Course Issues\",\n  \"rationale\": \"This topic involves problems and questions related to a massive open online course, including",
-  "finish_reason": "length",
-  "usage": {"prompt_tokens": 489, "completion_tokens": 32, "total_tokens": 521}
-}
-```
-#### Example (Accepted)
-```json
-"response": {
-  "text": "{\n  \"label\": \"Article Access Issues\",\n  \"rationale\": \"Topic revolves around accessing articles, subscription requirements, and related problems.\" \n}",
-  "finish_reason": "stop",
-  "usage": {"prompt_tokens": 328, "completion_tokens": 31, "total_tokens": 359}
-}
-```
-### Questions and Clarifications
-
-#### 1. Model Access
-Where can llama-3.1-8b, llama-3.3-70b-instruct, qwen/qwen2.5-7b, qwen/qwen3-30b models be accessed via cloud or lightweight endpoints (without local download)?
-Pulling these models locally consumes too much storage and memory on my laptop.
-
-#### 2. Prompt Variations
-Haven't tried variations of prompts. How many variations should be sufficient?
-Current prompt template:
-- system prompt:
-    - You label topics for MOOC forum posts. 
-    - Return a STRICT JSON object with exactly the keys 'label' and 'rationale'. 
-    - Constraints:
-        - 'label' must be a concise, human-readable topic name of at most 4 words.
-        - Do not include quotes, numbering, brackets, or punctuation in the label.
-        - 'rationale' is 1–2 short sentences explaining why the label fits.
-        - Respond with ONLY the JSON object. No extra text before or after.
-- user prompt:
-    - Subset: (A/B/C/D) (urgent MOOC forum posts)
-    - Topic ID:  | Topic Size: 
-    - Top keywords (ordered):
-    - Representative snippets (truncated):
-
-    Task: Based on the keywords and snippets, provide a concise human-readable label (≤4 words)
-    that best describes this topic.
-    Return JSON ONLY in the form: {"label": "<≤4 words>", "rationale": "<short reason>"}
-
-#### 3. Validation Criteria
-•	For responses rejected due to "finish_reason": "length",
-→ Should they be considered valid if the partial JSON structure is correct up to the cutoff?
-•	When re-prompting invalid cases,
-→ Does “re-prompt” mean re-sending the same prompt or re-writing the prompt (e.g., simpler version)?
+  
+## 📖 Reference
+Khodeir, N., & Elghannam, F. (2024). Efficient topic identification for urgent MOOC Forum posts using BERTopic and traditional topic modeling techniques. *Education and Information Technologies*. Springer.

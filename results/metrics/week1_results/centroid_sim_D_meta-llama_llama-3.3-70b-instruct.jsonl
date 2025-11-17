@@ -1,5 +1,0 @@
-{"group": "D", "topic_id": 41, "topic_size": 3, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "unit download issues", "cosine": 0.6309402585029602}
-{"group": "D", "topic_id": 47, "topic_size": 3, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "need help", "cosine": 0.8492453098297119}
-{"group": "D", "topic_id": 78, "topic_size": 2, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "forecasting errors", "cosine": 0.39098674058914185}
-{"group": "D", "topic_id": 79, "topic_size": 2, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "module download", "cosine": 0.8476897478103638}
-{"group": "D", "topic_id": 81, "topic_size": 2, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "update reference books", "cosine": 0.6743056774139404}

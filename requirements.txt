@@ -26,3 +26,7 @@ plotly>=5.17.0
 jupyter>=1.0.0
 ipywidgets>=8.1.0
 tqdm>=4.66.0
+
+# HTTP & API clients
+requests>=2.31.0
+openai>=0.28.0

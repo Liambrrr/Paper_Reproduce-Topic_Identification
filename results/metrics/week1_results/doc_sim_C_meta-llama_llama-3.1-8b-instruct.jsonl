@@ -1,2 +1,0 @@
-{"meta": {"group": "C", "topic_id": 6, "topic_size": 5, "model_tag": "meta-llama_llama-3.1-8b-instruct"}, "label": "article access issues", "stats": {"n_snippets": 5, "mean": 0.6399185061454773, "min": 0.46353664994239807, "max": 0.8329670429229736}}
-{"meta": {"group": "C", "topic_id": 16, "topic_size": 2, "model_tag": "meta-llama_llama-3.1-8b-instruct"}, "label": "blank pages issue", "stats": {"n_snippets": 2, "mean": 0.5206728577613831, "min": 0.3126598596572876, "max": 0.7286858558654785}}

@@ -1,4 +1,0 @@
-{"group": "A", "topic_id": 45, "topic_size": 6, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "reaction time", "cosine": 0.6278027296066284}
-{"group": "A", "topic_id": 152, "topic_size": 2, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "multiple choice format", "cosine": 0.5892515182495117}
-{"group": "A", "topic_id": 153, "topic_size": 2, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "linear regression issues", "cosine": 0.4696959853172302}
-{"group": "A", "topic_id": 160, "topic_size": 2, "llm_model": "meta-llama/llama-3.3-70b-instruct", "llm_provider": "openai-compatible", "label": "reference value", "cosine": 0.5364773273468018}
